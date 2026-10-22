@@ -1,0 +1,29 @@
+{
+  "name": "@discerno/encyclopedia",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Entries on cognitive biases, manipulation techniques, fallacies and rhetorical devices, with their schema and validator.",
+  "license": "(CC-BY-SA-4.0 AND AGPL-3.0-only)",
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    "./schema/entry.schema.json": "./schema/entry.schema.json",
+    "./entries/*": "./entries/*"
+  },
+  "scripts": {
+    "validate": "node scripts/validate-cli.ts entries",
+    "check": "tsc --noEmit && node scripts/validate-cli.ts entries",
+    "test": "node --test \"scripts/*.test.ts\""
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  }
+}
