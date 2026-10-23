@@ -17,6 +17,7 @@ references:
   - title: Rabat Plan of Action on the prohibition of advocacy of national, racial or religious hatred that constitutes incitement to discrimination, hostility or violence
     author: United Nations Office of the High Commissioner for Human Rights
     year: 2012
+    url: https://docs.un.org/en/A/HRC/22/17/Add.4
 ---
 ## Comment ça marche
 
