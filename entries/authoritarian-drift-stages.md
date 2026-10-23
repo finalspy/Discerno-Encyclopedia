@@ -30,6 +30,10 @@ references:
     author: Anna Lührmann, Staffan I. Lindberg
     year: 2019
     doi: 10.1080/13510347.2019.1582029
+  - title: How (not) to measure democracy
+    author: Vanessa A. Boese
+    year: 2019
+    doi: 10.1177/2233865918815571
 ---
 ## Définition
 
@@ -41,7 +45,7 @@ Les modèles de la littérature portent sur des mouvements et des régimes. Paxt
 
 ## Définitions concurrentes et débats
 
-Les indices de qualité de la démocratie (V-Dem, Freedom House et d'autres) n'aboutissent pas toujours aux mêmes classements. Appliquer ces modèles à des propos ou à des personnes dépasse leur objet : ils décrivent des régimes et des mouvements, avec leurs actes. Ils servent aussi à des usages polémiques, et le risque de faux positifs est réel.
+Les indices de qualité de la démocratie (V-Dem, Freedom House, Polity) reposent sur des définitions et des méthodes de mesure différentes, aux forces et aux faiblesses distinctes (Boese, 2019). Appliquer ces modèles à des propos ou à des personnes dépasse leur objet : ils décrivent des régimes et des mouvements, avec leurs actes. Ils servent aussi à des usages polémiques, et le risque de faux positifs est réel.
 
 ## Pourquoi cela aide à discerner
 
