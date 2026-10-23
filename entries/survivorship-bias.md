@@ -13,12 +13,16 @@ references:
   - title: A Method of Estimating Plane Vulnerability Based on Damage of Survivors
     author: Abraham Wald
     year: 1943
+  - title: Abraham Wald's Work on Aircraft Survivability
+    author: Marc Mangel, Francisco J. Samaniego
+    year: 1984
+    doi: 10.1080/01621459.1984.10478038
 ---
 ## Comment ça marche
 
 Un échantillon composé uniquement de ce qui a survécu à une sélection n'est pas représentatif de l'ensemble de départ. Les cas éliminés ne sont plus visibles et ne pèsent donc pas dans l'analyse.
 
-L'exemple classique est celui du statisticien Abraham Wald pendant la Seconde Guerre mondiale. Les avions revenus de mission portaient des impacts concentrés à certains endroits. Wald a fait remarquer que les endroits sans impact sur ces avions étaient ceux qu'il fallait renforcer : les appareils touchés à ces endroits ne revenaient pas.
+L'exemple classique est celui du statisticien Abraham Wald pendant la Seconde Guerre mondiale (Wald, 1943 ; Mangel et Samaniego, 1984). Les avions revenus de mission portaient des impacts concentrés à certains endroits. Wald a fait remarquer que les endroits sans impact sur ces avions étaient ceux qu'il fallait renforcer : les appareils touchés à ces endroits ne revenaient pas.
 
 ## Pourquoi c'est problématique
 
