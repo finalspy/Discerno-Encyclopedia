@@ -19,7 +19,7 @@ references:
 
 On pose le choix comme une alternative stricte (« soit A, soit B ») et on en exclut les autres possibilités : positions intermédiaires, autres solutions, ou possibilité de ne choisir aucune des deux. Le refus d'une option est alors présenté comme une adhésion à l'autre.
 
-Exemple neutre : « Soit on interdit complètement les téléphones à l'école, soit on laisse les élèves s'en servir en classe. »
+Exemple neutre : « Soit tu viens à ma fête samedi, soit tu n'es pas mon ami. »
 
 ## Pourquoi c'est problématique
 

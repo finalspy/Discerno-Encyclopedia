@@ -21,7 +21,7 @@ On soutient qu'une action ou une décision, jugée acceptable en elle-même, dé
 
 Walton (1992) montre qu'un argument de pente glissante n'est pas toujours fallacieux : il l'est lorsque la chaîne causale n'est pas étayée, c'est-à-dire lorsque chaque étape n'est pas rendue plausible par des raisons ou des données.
 
-Exemple neutre : « Si l'on autorise les devoirs en ligne, bientôt plus personne n'ira en cours. »
+Exemple neutre : « Si tu prends un biscuit avant le dîner, bientôt tu ne mangeras plus de vrais repas. »
 
 ## Pourquoi c'est problématique
 

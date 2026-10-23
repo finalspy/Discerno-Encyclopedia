@@ -19,7 +19,7 @@ references:
 
 On remplace l'argument de l'adversaire par une version plus faible, plus extrême ou simplifiée, puis on réfute cette version. Le raisonnement qui suit peut être valide, mais il porte sur une position que personne n'a défendue.
 
-Exemple neutre : « Je pense qu'il faudrait limiter les écrans des enfants le soir. » Réponse : « Donc vous voulez interdire tous les écrans aux enfants ? »
+Exemple neutre : « Je voudrais qu'on baisse un peu la musique, il est tard. » Réponse : « Donc vous voulez qu'on passe la soirée dans un silence complet ? »
 
 ## Pourquoi c'est problématique
 
