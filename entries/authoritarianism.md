@@ -28,7 +28,7 @@ references:
     year: 2005
     doi: 10.1017/cbo9780511614712
   - title: "Finding the Loch Ness Monster: Left-wing authoritarianism in the United States"
-    author: Lucian Gideon Conway III, Laura Janelle Gornick, Shannon C. Houck, Cecilia Anderson, Jennifer Stockert, Diana Sessoms, Kevin McCue
+    author: Lucian Gideon Conway III, Shannon C. Houck, Laura Janelle Gornick, Meredith A. Repke
     year: 2018
     doi: 10.1111/pops.12470
   - title: Clarifying the structure and nature of left-wing authoritarianism
