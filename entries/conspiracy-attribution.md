@@ -18,6 +18,7 @@ references:
   - title: The Paranoid Style in American Politics
     author: Richard Hofstadter
     year: 1964
+    url: https://openlibrary.org/works/OL2465572W
   - title: The Open Society and Its Enemies
     author: Karl R. Popper
     year: 1945
