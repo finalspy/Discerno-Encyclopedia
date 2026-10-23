@@ -14,12 +14,20 @@ references:
     author: Justin Kruger, David Dunning
     year: 1999
     doi: 10.1037/0022-3514.77.6.1121
+  - title: Random Number Simulations Reveal How Random Noise Affects the Measurements and Graphical Portrayals of Self-Assessed Competency
+    author: Edward Nuhfer, Christopher Cogan, Steven Fleischer, Eric Gaze, Karl Wirth
+    year: 2016
+    doi: 10.5038/1936-4660.9.1.4
+  - title: "The Dunning-Kruger effect is (mostly) a statistical artefact: Valid approaches to testing the hypothesis with individual differences data"
+    author: Gilles E. Gignac, Marcin Zajenkowski
+    year: 2020
+    doi: 10.1016/j.intell.2020.101449
 ---
 ## Comment ça marche
 
 Kruger et Dunning (1999) ont demandé à des participants de passer des tests (raisonnement logique, grammaire, humour) puis d'estimer leur propre performance. Les participants du quart le moins performant surestimaient nettement leur résultat. Les auteurs l'expliquent par un double handicap : les compétences nécessaires pour bien faire sont aussi celles qui permettent de juger la qualité de sa propre performance.
 
-Cette lecture est discutée : une partie de l'effet observé peut venir d'artefacts statistiques, et la popularisation de l'effet (« les incompétents se croient experts ») va au-delà de ce que les données établissent.
+Cette lecture est discutée : une partie de l'effet observé peut venir d'artefacts statistiques (Nuhfer et al., 2016 ; Gignac et Zajenkowski, 2020), et la popularisation de l'effet (« les incompétents se croient experts ») va au-delà de ce que les données établissent.
 
 ## Pourquoi c'est problématique
 
