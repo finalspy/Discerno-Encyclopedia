@@ -31,6 +31,10 @@ references:
     author: Kevin Passmore
     year: 2002
     url: https://openlibrary.org/works/OL3343550W
+  - title: "Beyond Totalitarianism: Stalinism and Nazism Compared"
+    author: Sheila Fitzpatrick, Michael Geyer
+    year: 2009
+    url: https://openlibrary.org/works/OL25676703W
 ---
 ## Définition
 
@@ -40,7 +44,9 @@ Le mot désigne d'abord le régime et le mouvement italiens de l'entre-deux-guer
 
 Griffin (1991) propose un « minimum fasciste », un ultranationalisme populiste de régénération (« palingénésique »), là où Payne (1995) dresse une typologie de caractères, de buts et de méthodes, et où Passmore (2002) présente les débats entre historiens. Eco (1995) ne définit pas le fascisme mais liste quatorze traits typiques d'un « fascisme éternel », dont le culte de la tradition, le refus du désaccord, la peur de la différence et l'obsession du complot ; il précise qu'aucun trait ne suffit, et qu'un seul peut faire « coaguler » le fascisme.
 
-Paxton insiste sur un point de méthode : le fascisme se comprend par ses étapes (naissance de mouvements, enracinement dans le système politique, prise du pouvoir, exercice du pouvoir, radicalisation ou enlisement), et il ne se reproduit pas sous la même forme. Employer le mot pour des acteurs d'aujourd'hui est une question disputée, traitée par la fiche sur les étiquettes abusives.
+Paxton insiste sur un point de méthode : le fascisme se comprend par ses étapes (naissance de mouvements, enracinement dans le système politique, prise du pouvoir, exercice du pouvoir, radicalisation ou enlisement), et il ne se reproduit pas sous la même forme. Les historiens comparent aussi les régimes fascistes à d'autres régimes du XXe siècle, notamment au régime soviétique de Staline. Cette comparaison, souvent faite sous le terme de totalitarisme, reste débattue (Fitzpatrick et Geyer, 2009).
+
+Employer le mot pour des acteurs d'aujourd'hui est une question disputée, traitée par la fiche sur les étiquettes abusives.
 
 ## Pourquoi cela aide à discerner
 
