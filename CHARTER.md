@@ -14,7 +14,7 @@ The encyclopedia describes **forms** (techniques, signs, mechanisms), never conc
 ## Neutrality tests
 
 5. **Swap test.** Each indicator must read identically, and stay acceptable, when applied to any ideological camp. An entry whose definition names or implies a camp is rejected.
-6. **Balanced corpus.** The method behind any scoring built on these entries is published and tested on a corpus balanced across the political spectrum; the results are published.
+6. **Balanced corpus.** The entries are educational. If a scoring or an analysis were ever built on them (not planned), its method would first be published and tested on a corpus balanced across the political spectrum, with the results published.
 7. **Convergence, intensity, power.** A single sign is never a diagnosis. Entries on gradation state that what matters is the convergence of several signs, their intensity, and the actual power to coerce (words in a comment thread are not state power). Entries do not create equivalence between different levels of power.
 8. **Misuse.** The encyclopedia includes entries on the misuse of labels ("fascist", "conspiracist", "pseudoscientific") as insults.
 
@@ -30,3 +30,7 @@ The encyclopedia describes **forms** (techniques, signs, mechanisms), never conc
 13. `draft` then `in-review` then `published`. Entries in the sensitive section are published only after a review by someone qualified in the field (history, political science, psychology, philosophy of science), recorded with the review date.
 14. A published entry is corrected in public: the history of changes is the git history.
 15. Nothing here is a verdict on a person or an organization.
+
+## Responding
+
+16. Advice on how to react to or counter a sign is limited to lawful, non-violent and proportionate actions: verifying, asking for sources, documenting, reporting to a platform or an authority, supporting the people targeted, taking part in civic life. It never recommends harassment, publishing private information, or dehumanizing the other side. The swap test applies to this advice as well.
