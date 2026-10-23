@@ -14,6 +14,7 @@ references:
   - title: 'The "Hitler Myth": Image and Reality in the Third Reich'
     author: Ian Kershaw
     year: 1987
+    url: https://openlibrary.org/works/OL1924188W
   - title: "The Stalin Cult: A Study in the Alchemy of Power"
     author: Jan Plamper
     year: 2012
