@@ -15,6 +15,14 @@ test('accepts valid entries', () => {
   assert.deepEqual(messages('valid'), []);
 });
 
+test('accepts a concept entry with the concept sections', () => {
+  assert.deepEqual(messages('concept-valid'), []);
+});
+
+test('accepts a published authoritarian-drift entry once it records its reviewer', () => {
+  assert.deepEqual(messages('drift-published-reviewed'), []);
+});
+
 const rejected: ReadonlyArray<readonly [string, string]> = [
   ['slug-mismatch', 'must equal the file name "anchoring"'],
   ['missing-section', 'missing section "## How to detect it"'],
@@ -23,7 +31,9 @@ const rejected: ReadonlyArray<readonly [string, string]> = [
   ['alias-collision', 'alias "framing" is the slug of another entry'],
   ['related-unknown', 'related "ghost" does not exist'],
   ['related-former-slug', 'related "framing-effect" is a former slug: use "framing"'],
-  ['invalid-yaml', 'front matter is not valid YAML']
+  ['invalid-yaml', 'front matter is not valid YAML'],
+  ['indicator-missing-response', 'missing section "## How to respond"'],
+  ['drift-published-unreviewed', "must have required property 'reviewed_by'"]
 ];
 
 for (const [name, expected] of rejected) {
