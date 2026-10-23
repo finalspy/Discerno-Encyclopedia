@@ -9,7 +9,7 @@ status: in-review
 themes: [obscurantism-and-pseudoscience]
 related: [cherry-picking, manufactured-doubt, obscurantism, pseudoscience]
 classifications:
-  wikipedia: [Science_denial]
+  wikipedia: [Denialism]
 references:
   - title: "Denialism: what is it and how should scientists respond?"
     author: Pascal Diethelm, Martin McKee
