@@ -18,11 +18,13 @@ LICENSES/                 license texts
 
 ## Entry format
 
-A YAML front matter block followed by Markdown. Required fields: `slug`, `type`, `lang`, `title`, `summary`, `status`. See the schema for the others (`aliases`, `synonyms`, `related`, `classifications`, `references`, `adapted_from`, `last_reviewed`).
+A YAML front matter block followed by Markdown. Required fields: `slug`, `type`, `lang`, `title`, `summary`, `status`. See the schema for the others (`aliases`, `synonyms`, `themes`, `related`, `classifications`, `references`, `adapted_from`, `last_reviewed`, `reviewed_by`).
 
 - The `slug` equals the file name and is a stable identifier: other entries and the analyzer link to it. When an entry is renamed, the old slug moves to `aliases`; a slug is never reused.
 - `status` is `draft`, `in-review` or `published`. A published entry needs `last_reviewed` and at least one reference.
-- Unless the entry is a draft, the body has four sections, in the entry's language: *How it works*, *Why it is problematic*, *How to detect it*, *How to protect yourself* (`## ` headings; the French titles are listed in `scripts/validate.ts`).
+- `type` is `bias`, `manipulation-technique`, `fallacy`, `rhetorical-device`, `indicator` (an observable sign) or `concept` (a definition with its debates). `themes` places the entry in one or more thematic sections.
+- Unless the entry is a draft, the body has the sections of its type, in the entry's language, as `## ` headings (the exact titles, English and French, are in `scripts/validate.ts`). Biases, techniques, fallacies and devices: how it works, why it is problematic, how to detect it, how to protect yourself. Indicators add how to respond. Concepts: definition, competing definitions and debates, why it helps to discern.
+- An entry of the `authoritarian-drift` theme needs `reviewed_by` to be published (see [CHARTER.md](CHARTER.md)).
 - Sources are cited. Ideas and facts are reused, text is not, unless the source license allows it and `adapted_from` says so. Sources under a non-commercial license (CC BY-NC) are cited only.
 
 ## Commands
