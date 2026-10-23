@@ -8,8 +8,6 @@ summary: Manière de tenir ses croyances comme un système fermé, qui ne tolèr
 status: in-review
 themes: [authoritarian-drift, cognitive-biases]
 related: [affective-polarization, authoritarianism, confirmation-bias, obscurantism, radicalization, thought-terminating-cliche]
-classifications:
-  wikipedia: [Dogmatism]
 references:
   - title: The Open and Closed Mind
     author: Milton Rokeach
