@@ -6,6 +6,11 @@ title: Problème de la démarcation
 synonyms: [critère de démarcation]
 summary: Question de savoir ce qui distingue la science de ce qui n'en est pas, à laquelle les philosophes des sciences n'ont pas donné de réponse unique.
 status: in-review
+open_issues:
+  - kind: unverified
+    note: "The summary of Lakatos (1970), evaluating research programmes over time, was not checked against the chapter."
+  - kind: other
+    note: "The Popper link points to Logik der Forschung, the German original of the cited 1959 translation."
 themes: [obscurantism-and-pseudoscience]
 related: [pseudoscience]
 classifications:

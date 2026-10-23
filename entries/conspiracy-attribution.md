@@ -6,6 +6,9 @@ title: Attribution à un complot
 synonyms: [pensée conspirationniste, conspiracy thinking]
 summary: Expliquer des événements par l'action cachée et coordonnée d'un groupe malveillant, d'une manière qu'aucune preuve ne peut contredire.
 status: in-review
+open_issues:
+  - kind: other
+    note: "The Hofstadter link points to the 1965 book that collects the 1964 essay."
 themes: [authoritarian-drift, argumentation]
 related: [confirmation-bias, manufactured-doubt, scapegoating]
 classifications:

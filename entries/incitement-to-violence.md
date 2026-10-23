@@ -6,6 +6,9 @@ title: Appel à la violence
 synonyms: [discours dangereux, dangerous speech]
 summary: Propos qui encouragent ou excusent la violence contre un groupe ou des personnes, ouvertement ou par sous-entendus.
 status: in-review
+open_issues:
+  - kind: link-missing
+    note: "Benesch (2012): no stable link found yet; look for the proposal on dangerousspeech.org."
 themes: [authoritarian-drift]
 related: [dehumanization, radicalization]
 classifications:

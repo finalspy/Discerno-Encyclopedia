@@ -6,6 +6,9 @@ title: Biais du survivant
 synonyms: [survivorship bias]
 summary: On tire des conclusions de ce qui a réussi ou survécu en oubliant tous les cas qui ont disparu de l'échantillon.
 status: in-review
+open_issues:
+  - kind: link-missing
+    note: "Wald (1943) has no stable link; Mangel and Samaniego (1984) is the linked source for the method."
 related: [cherry-picking, confirmation-bias]
 classifications:
   wikipedia: [Survivorship_bias]

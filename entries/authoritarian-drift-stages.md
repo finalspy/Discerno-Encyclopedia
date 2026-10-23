@@ -5,6 +5,9 @@ lang: fr
 title: Degrés d'une dérive autoritaire
 summary: Grille de lecture sur deux axes, l'intensité des signes et le pouvoir réel de contrainte, appuyée sur les modèles de la science politique.
 status: in-review
+open_issues:
+  - kind: unverified
+    note: "Boese (2019) is cited from its abstract (V-Dem, Freedom House and Polity differ in definition and measurement); check against the paper."
 themes: [authoritarian-drift]
 related: [authoritarianism, delegitimization-of-opponents, fascism, label-misuse, suppression-of-dissent, totalitarianism]
 classifications:

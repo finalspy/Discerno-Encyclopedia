@@ -6,6 +6,9 @@ title: Effet Dr Fox
 synonyms: [séduction éducative]
 summary: Un orateur assuré et expressif paraît compétent et clair même quand le contenu de son propos est vide.
 status: in-review
+open_issues:
+  - kind: unverified
+    note: "The finding of Abrami, Leventhal and Perry (1982) is summarized from the literature; check it against the paper."
 themes: [cognitive-biases, obscurantism-and-pseudoscience]
 related: [barnum-effect, charlatanism, dunning-kruger-effect, halo-effect, pseudo-profound-bullshit]
 classifications:

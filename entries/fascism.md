@@ -6,6 +6,9 @@ title: Fascisme (concept historique)
 synonyms: [fascism]
 summary: Notion historique dont les spécialistes proposent des définitions concurrentes, appliquée d'abord aux mouvements italien et allemand de l'entre-deux-guerres.
 status: in-review
+open_issues:
+  - kind: unverified
+    note: "The comparison with the Soviet regime is attributed to Fitzpatrick and Geyer (2009); check it against the book."
 themes: [authoritarian-drift]
 related: [authoritarian-drift-stages, cult-of-the-leader, label-misuse, scapegoating, totalitarianism]
 classifications:

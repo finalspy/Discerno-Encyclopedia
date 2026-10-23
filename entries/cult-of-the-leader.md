@@ -6,6 +6,9 @@ title: Culte du chef
 synonyms: [culte de la personnalité, cult of personality]
 summary: Présenter un chef comme infaillible ou providentiel, de sorte que critiquer la personne revienne à trahir la cause.
 status: in-review
+open_issues:
+  - kind: other
+    note: "The Kershaw link points to Hitler-Mythos, the German title of the cited work."
 themes: [authoritarian-drift]
 related: [appeal-to-authority, fascism, halo-effect, totalitarianism]
 classifications:
