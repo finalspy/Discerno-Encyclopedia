@@ -15,12 +15,16 @@ references:
     author: Donald H. Naftulin, John E. Ware Jr., Frank A. Donnelly
     year: 1973
     doi: 10.1097/00001888-197307000-00003
+  - title: Educational Seduction
+    author: Philip C. Abrami, Les Leventhal, Raymond P. Perry
+    year: 1982
+    doi: 10.3102/00346543052003446
 ---
 ## Comment ça marche
 
 Dans l'expérience de Naftulin, Ware et Donnelly (1973), un acteur présenté comme un expert a donné une conférence au style chaleureux et expressif, sur un contenu volontairement dépourvu de sens. Devant un public de professionnels, la plupart ont jugé l'exposé stimulant et clair.
 
-L'étude a des limites méthodologiques (petit échantillon, pas de groupe témoin) et a été discutée. Elle illustre néanmoins un résultat étudié ensuite : le style de présentation influence fortement le jugement sur la qualité du contenu.
+L'étude a des limites méthodologiques (petit échantillon, pas de groupe témoin) et a été discutée. Elle illustre néanmoins un résultat confirmé ensuite : dans une synthèse de plusieurs études, l'expressivité de l'enseignant influence nettement les évaluations des étudiants, et beaucoup moins leurs acquis mesurés (Abrami, Leventhal et Perry, 1982).
 
 ## Pourquoi c'est problématique
 
