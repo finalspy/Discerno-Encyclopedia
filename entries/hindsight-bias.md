@@ -3,7 +3,7 @@ slug: hindsight-bias
 type: bias
 lang: fr
 title: Biais rétrospectif
-synonyms: [biais de rétrospection, «je le savais»]
+synonyms: [biais de rétrospection, « je le savais »]
 summary: Une fois le résultat connu, on le juge après coup plus prévisible qu'il ne l'était.
 status: in-review
 related: [confirmation-bias]

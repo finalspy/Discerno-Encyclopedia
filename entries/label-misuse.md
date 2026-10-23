@@ -4,7 +4,7 @@ type: concept
 lang: fr
 title: Étiquettes abusives
 synonyms: [inflation conceptuelle, concept stretching]
-summary: Employer un mot chargé (fasciste, complotiste, extrémiste...) pour clore une discussion au lieu d'examiner si ses critères sont remplis.
+summary: Employer un mot chargé (fasciste, complotiste, extrémiste…) pour clore une discussion au lieu d'examiner si ses critères sont remplis.
 status: in-review
 themes: [authoritarian-drift, argumentation]
 related: [ad-hominem, authoritarian-drift-stages, fascism, whataboutism]
@@ -32,7 +32,7 @@ La « loi de Godwin » (1994) observe que, plus une discussion en ligne s'allong
 
 Où commence l'abus ? Les spécialistes eux-mêmes diffèrent sur les critères de mots comme « fascisme » ou « totalitarisme ». Une comparaison historique sérieuse, qui explicite ses critères et ses limites, n'est pas un abus ; l'usage du mot comme conclusion, sans critères, l'est.
 
-Le procédé n'appartient à aucun camp : toute orientation dispose de mots qui servent à disqualifier (« fasciste », « communiste », « complotiste », « extrémiste », « pseudo-scientifique »...).
+Le procédé n'appartient à aucun camp : toute orientation dispose de mots qui servent à disqualifier (« fasciste », « communiste », « complotiste », « extrémiste », « pseudo-scientifique »…).
 
 ## Pourquoi cela aide à discerner
 
