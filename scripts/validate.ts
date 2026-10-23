@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { parseEntry, type EntryFrontMatter, type EntryLang, type EntryType } from './entry.ts';
+import { isAllowedLink } from './link-hosts.ts';
 
 export interface Issue {
   file: string;
@@ -79,6 +80,18 @@ function checkEntry(file: string, issues: Issue[]): LocatedEntry | null {
   if (front.slug !== expectedSlug) {
     issues.push({ file, message: `slug "${front.slug}" must equal the file name "${expectedSlug}"` });
     valid = false;
+  }
+  const links = [
+    ...(front.references ?? []).flatMap((reference, index) =>
+      reference.url === undefined ? [] : [{ where: `references[${index}].url`, url: reference.url }]
+    ),
+    ...(front.adapted_from ?? []).map((source, index) => ({ where: `adapted_from[${index}].url`, url: source.url }))
+  ];
+  for (const { where, url } of links) {
+    if (!isAllowedLink(url)) {
+      issues.push({ file, message: `${where}: the host of "${url}" is not an accepted link host (see CHARTER.md)` });
+      valid = false;
+    }
   }
   if (front.status !== 'draft') {
     const headings = new Set([...body.matchAll(/^## (.+?)\s*$/gm)].map((heading) => heading[1]));

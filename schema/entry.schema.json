@@ -275,6 +275,11 @@
           "type": "integer",
           "minimum": 1500
         },
+        "doi": {
+          "description": "Digital Object Identifier of the work, without the resolver prefix.",
+          "type": "string",
+          "pattern": "^10\\.\\d{4,9}/\\S+$"
+        },
         "url": {
           "type": "string",
           "format": "uri"

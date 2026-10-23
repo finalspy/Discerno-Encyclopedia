@@ -25,6 +25,7 @@ export interface Reference {
   title: string;
   author?: string;
   year?: number;
+  doi?: string;
   url?: string;
   accessed?: string;
 }

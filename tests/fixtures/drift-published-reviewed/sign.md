@@ -10,7 +10,7 @@ reviewed_by: external historian
 themes: [authoritarian-drift]
 references:
   - title: Fixture reference
-    url: https://example.org/sign
+    url: https://openlibrary.org/works/OL2W
 ---
 ## How it works
 

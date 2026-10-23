@@ -32,6 +32,8 @@ const rejected: ReadonlyArray<readonly [string, string]> = [
   ['related-unknown', 'related "ghost" does not exist'],
   ['related-former-slug', 'related "framing-effect" is a former slug: use "framing"'],
   ['invalid-yaml', 'front matter is not valid YAML'],
+  ['link-host-rejected', 'is not an accepted link host'],
+  ['doi-invalid', 'must match pattern'],
   ['indicator-missing-response', 'missing section "## How to respond"'],
   ['drift-published-unreviewed', "must have required property 'reviewed_by'"]
 ];

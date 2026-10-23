@@ -12,10 +12,10 @@ classifications:
   wikipedia: [Anchoring_effect]
 references:
   - title: Fixture reference
-    url: https://example.org/anchoring
+    url: https://openlibrary.org/works/OL1W
 adapted_from:
   - title: Fixture source
-    url: https://example.org/source
+    url: https://en.wikipedia.org/wiki/Anchoring_effect
     license: CC-BY-SA-4.0
 ---
 ## How it works
