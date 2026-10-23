@@ -14,6 +14,7 @@ references:
   - title: The Logic of Scientific Discovery
     author: Karl R. Popper
     year: 1959
+    url: https://openlibrary.org/works/OL262211W
   - title: The Structure of Scientific Revolutions
     author: Thomas S. Kuhn
     year: 1962
