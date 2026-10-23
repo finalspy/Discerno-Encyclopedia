@@ -1,0 +1,29 @@
+Copyright (c) 2026 YPETIT
+
+This repository is distributed under two licenses, depending on the kind of file. The full texts
+are in the LICENSES/ directory.
+
+Entries and other texts
+  entries/, CHARTER.md, README.md, CONTRIBUTING.md
+  Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+  SPDX-License-Identifier: CC-BY-SA-4.0
+  Text: LICENSES/CC-BY-SA-4.0.txt
+
+Code
+  scripts/, schema/, tests/, package.json, tsconfig.json
+  GNU Affero General Public License, version 3 only (AGPL-3.0-only)
+  SPDX-License-Identifier: AGPL-3.0-only
+  Text: LICENSES/AGPL-3.0-only.txt
+
+Attribution
+
+Reusing an entry under CC BY-SA 4.0 requires giving credit, linking to the license and stating
+whether you changed the text. Suggested credit:
+
+  "<entry title>", Discerno Encyclopedia, YPETIT, CC BY-SA 4.0,
+  https://github.com/finalspy/Discerno-Encyclopedia
+
+Material you build from an entry must be shared under the same license.
+
+The references cited by the entries remain the property of their authors; the entries cite them
+and do not reproduce them.

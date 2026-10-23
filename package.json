@@ -5,6 +5,11 @@
   "type": "module",
   "description": "Entries on cognitive biases, manipulation techniques, fallacies and rhetorical devices, with their schema and validator.",
   "license": "(CC-BY-SA-4.0 AND AGPL-3.0-only)",
+  "author": "YPETIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/finalspy/Discerno-Encyclopedia.git"
+  },
   "engines": {
     "node": ">=24"
   },
