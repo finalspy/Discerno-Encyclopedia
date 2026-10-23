@@ -23,7 +23,7 @@ Contributions are welcome: new entries, corrections, better sources, fixes to th
 
 4. In the pull request, state the sources you used and anything you are unsure about.
 
-A published entry is corrected in public: the history of changes is the git history. To report an error, open an issue with the entry's `slug`, what is wrong and a source.
+A published entry is corrected in public: the history of changes is the git history. To report an error, open an issue with the entry's `slug`, what is wrong and a source. If you cannot fix a point yourself (a missing source, a doubt), add it to the entry's `open_issues` with a short note, and open an issue for the discussion; a published entry cannot keep open issues.
 
 ## Git
 
