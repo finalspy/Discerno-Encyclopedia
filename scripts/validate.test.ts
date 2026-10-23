@@ -23,6 +23,10 @@ test('accepts a published authoritarian-drift entry once it records its reviewer
   assert.deepEqual(messages('drift-published-reviewed'), []);
 });
 
+test('accepts an in-review entry that lists its open issues', () => {
+  assert.deepEqual(messages('open-issues-valid'), []);
+});
+
 const rejected: ReadonlyArray<readonly [string, string]> = [
   ['slug-mismatch', 'must equal the file name "anchoring"'],
   ['missing-section', 'missing section "## How to detect it"'],
@@ -35,7 +39,8 @@ const rejected: ReadonlyArray<readonly [string, string]> = [
   ['link-host-rejected', 'is not an accepted link host'],
   ['doi-invalid', 'must match pattern'],
   ['indicator-missing-response', 'missing section "## How to respond"'],
-  ['drift-published-unreviewed', "must have required property 'reviewed_by'"]
+  ['drift-published-unreviewed', "must have required property 'reviewed_by'"],
+  ['open-issues-invalid-kind', 'must be equal to one of the allowed values']
 ];
 
 for (const [name, expected] of rejected) {

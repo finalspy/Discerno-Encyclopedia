@@ -166,6 +166,14 @@
       "description": "Name or role of the external reviewer. Required to publish an entry of the authoritarian-drift theme.",
       "type": "string",
       "minLength": 1
+    },
+    "open_issues": {
+      "description": "Points still to fix or to settle on the entry. A published entry has none (checked by the validator).",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/open_issue"
+      }
     }
   },
   "allOf": [
@@ -223,6 +231,39 @@
     }
   ],
   "$defs": {
+    "open_issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "note"
+      ],
+      "properties": {
+        "kind": {
+          "description": "source-missing: a claim has no reference. unverified: a reference or a summary was not checked against the work. link-missing: no stable link found. contested: sources disagree or the claim is disputed. neutrality: the wording or example may favor a side. uncertain: a question for the owner. other: anything else.",
+          "type": "string",
+          "enum": [
+            "source-missing",
+            "unverified",
+            "link-missing",
+            "contested",
+            "neutrality",
+            "uncertain",
+            "other"
+          ]
+        },
+        "note": {
+          "description": "What is to fix or to settle, in one or two sentences.",
+          "type": "string",
+          "minLength": 1
+        },
+        "issue": {
+          "description": "Number of the tracker issue where the point is discussed.",
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
     "slug": {
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"

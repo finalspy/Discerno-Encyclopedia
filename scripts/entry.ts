@@ -21,6 +21,21 @@ export type EntryLang = 'en' | 'fr';
 export type EntryStatus = 'draft' | 'in-review' | 'published';
 export type Taxonomy = 'disarm' | 'semeval2023' | 'semeval2020' | 'logic' | 'wikipedia';
 
+export type OpenIssueKind =
+  | 'source-missing'
+  | 'unverified'
+  | 'link-missing'
+  | 'contested'
+  | 'neutrality'
+  | 'uncertain'
+  | 'other';
+
+export interface OpenIssue {
+  kind: OpenIssueKind;
+  note: string;
+  issue?: number;
+}
+
 export interface Reference {
   title: string;
   author?: string;
@@ -41,6 +56,7 @@ export interface EntryFrontMatter {
   status: EntryStatus;
   last_reviewed?: string;
   reviewed_by?: string;
+  open_issues?: OpenIssue[];
   themes?: EntryTheme[];
   related?: string[];
   classifications?: Partial<Record<Taxonomy, string[]>>;
