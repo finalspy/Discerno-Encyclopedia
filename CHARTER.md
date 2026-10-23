@@ -22,15 +22,17 @@ The encyclopedia describes **forms** (techniques, signs, mechanisms), never conc
 
 9. Every factual claim is supported by a listed reference: peer-reviewed work, a scholarly book, a primary document, or a recognized reference institution. Encyclopedias and press articles may be added as pointers, not as the only support.
 10. A contested claim has at least two independent sources. Where scholars disagree, the entry says so and presents the positions without ranking them by political convenience.
-11. References are checked against the actual work (title, authors, year, venue) by a reviewer before publication. Wikipedia and classification identifiers (DISARM, SemEval, LOGIC) are pointers, never proof.
+11. References are checked against the actual work (title, authors, year, venue) by a reviewer before publication; a DOI or an Open Library record found for a reference is verified against its title, authors and year, never trusted for its title alone. Wikipedia and classification identifiers (DISARM, SemEval, LOGIC) are pointers, never proof.
 12. Ideas and facts are reused; text is not, unless the source license allows it and `adapted_from` says so. CC BY-NC sources are cited only.
+
+13. **Outbound links.** Each reference carries a stable link when one exists: the DOI (field `doi`, without the resolver prefix) for articles and many books, otherwise the page of the publisher or of an institution, the Open Library record for books, Wikisource or Gutenberg for public domain texts. Wikipedia links are built from the identifiers of `classifications.wikipedia`. No retailer or affiliate links, no link shorteners, no aggregator shortcuts. Links may only point to the hosts listed in `scripts/link-hosts.ts`, which the validator enforces; adding a host takes a pull request that justifies it. Links are checked before publication and re-checked periodically.
 
 ## Review
 
-13. `draft` then `in-review` then `published`. Entries in the sensitive section are published only after a review by someone qualified in the field (history, political science, psychology, philosophy of science), recorded with the review date.
-14. A published entry is corrected in public: the history of changes is the git history.
-15. Nothing here is a verdict on a person or an organization.
+14. `draft` then `in-review` then `published`. Entries in the sensitive section are published only after a review by someone qualified in the field (history, political science, psychology, philosophy of science), recorded with the review date.
+15. A published entry is corrected in public: the history of changes is the git history.
+16. Nothing here is a verdict on a person or an organization.
 
 ## Responding
 
-16. Advice on how to react to or counter a sign is limited to lawful, non-violent and proportionate actions: verifying, asking for sources, documenting, reporting to a platform or an authority, supporting the people targeted, taking part in civic life. It never recommends harassment, publishing private information, or dehumanizing the other side. The swap test applies to this advice as well.
+17. Advice on how to react to or counter a sign is limited to lawful, non-violent and proportionate actions: verifying, asking for sources, documenting, reporting to a platform or an authority, supporting the people targeted, taking part in civic life. It never recommends harassment, publishing private information, or dehumanizing the other side. The swap test applies to this advice as well.
