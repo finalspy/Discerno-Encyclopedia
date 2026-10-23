@@ -4,6 +4,8 @@ Entries on cognitive biases, manipulation techniques, fallacies and rhetorical d
 
 This repository is a content repository. It is used as a git submodule by the Discerno application.
 
+The rules every entry follows are in [CHARTER.md](CHARTER.md).
+
 ## Layout
 
 ```
