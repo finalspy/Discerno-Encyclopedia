@@ -2,9 +2,9 @@
 
 Entries on cognitive biases, manipulation techniques, fallacies and rhetorical devices, with the schema and the validator that every entry must pass. The entries explain how each phenomenon works, why it is problematic, how to detect it and how to protect oneself. They are factual and nonpartisan: they describe techniques, never conclusions or political sides.
 
-This repository is a content repository. It is used as a git submodule by the Discerno application.
+This repository is a content repository: applications read the entries and the schema from it, for example as a git submodule.
 
-The rules every entry follows are in [CHARTER.md](CHARTER.md).
+The rules every entry follows are in [CHARTER.md](CHARTER.md). To contribute, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Layout
 
@@ -13,14 +13,17 @@ entries/                  one Markdown file per entry: entries/<slug>.md
 schema/entry.schema.json  JSON Schema (draft 2020-12) of the front matter
 scripts/                  validator (TypeScript, run natively by Node 24) and its tests
 tests/fixtures/           valid and invalid sample entries used by the tests
+LICENSE                   copyright notice, licenses by kind of file, attribution
 LICENSES/                 license texts
+CONTRIBUTING.md           how to contribute
+CHARTER.md                editorial rules of every entry
 ```
 
 ## Entry format
 
 A YAML front matter block followed by Markdown. Required fields: `slug`, `type`, `lang`, `title`, `summary`, `status`. See the schema for the others (`aliases`, `synonyms`, `themes`, `related`, `classifications`, `references`, `adapted_from`, `last_reviewed`, `reviewed_by`).
 
-- The `slug` equals the file name and is a stable identifier: other entries and the analyzer link to it. When an entry is renamed, the old slug moves to `aliases`; a slug is never reused.
+- The `slug` equals the file name and is a stable identifier: other entries and applications link to it. When an entry is renamed, the old slug moves to `aliases`; a slug is never reused.
 - `status` is `draft`, `in-review` or `published`. A published entry needs `last_reviewed` and at least one reference.
 - `type` is `bias`, `manipulation-technique`, `fallacy`, `rhetorical-device`, `indicator` (an observable sign) or `concept` (a definition with its debates). `themes` places the entry in one or more thematic sections.
 - Unless the entry is a draft, the body has the sections of its type, in the entry's language, as `## ` headings (the exact titles, English and French, are in `scripts/validate.ts`). Biases, techniques, fallacies and devices: how it works, why it is problematic, how to detect it, how to protect yourself. Indicators add how to respond. Concepts: definition, competing definitions and debates, why it helps to discern.
@@ -42,4 +45,14 @@ pnpm run test       # validator tests
 ## Licenses
 
 - Entries (`entries/`) and the other texts: [CC BY-SA 4.0](LICENSES/CC-BY-SA-4.0.txt).
-- The validator and its tests (`scripts/`, `schema/`, `tests/`): [AGPL-3.0-only](LICENSES/AGPL-3.0-only.txt).
+- The validator, the schema and the tests (`scripts/`, `schema/`, `tests/`): [AGPL-3.0-only](LICENSES/AGPL-3.0-only.txt).
+
+Copyright (c) 2026 YPETIT. Details are in [LICENSE](LICENSE).
+
+## Attribution
+
+Reusing an entry requires credit, a link to the license and a note of any change. Suggested credit:
+
+> "Entry title", Discerno Encyclopedia, YPETIT, CC BY-SA 4.0, https://github.com/finalspy/Discerno-Encyclopedia
+
+What you build from an entry is shared under the same license.
