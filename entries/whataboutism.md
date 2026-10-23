@@ -14,12 +14,22 @@ references:
     author: Douglas N. Walton
     year: 1998
     url: https://openlibrary.org/works/OL14852686W
+  - title: whataboutism, n.
+    author: Oxford English Dictionary
+    year: 2023
+    doi: 10.1093/oed/8689802929
+  - title: The Rhetoric of “Whataboutism” in American Journalism and Political Identity
+    author: Alan Dykstra
+    year: 2020
+    doi: 10.29107/rr2020.2.1
 ---
 ## Comment ça marche
 
 Une critique ou une accusation est écartée par une question ou une remarque du type « Et X, alors ? », qui déplace la discussion vers un autre sujet, souvent un reproche fait à l'auteur de la critique ou à son camp. Le fait reproché à l'origine n'est ni contesté ni expliqué.
 
 Le procédé est proche du *tu quoque* (« toi aussi »), que Walton (1998) analyse parmi les arguments *ad hominem* : il détourne l'attention du fond vers la personne ou vers un autre cas.
+
+Le mot lui-même est enregistré par l'*Oxford English Dictionary*, et son emploi dans le débat public a été étudié comme procédé rhétorique (Dykstra, 2020).
 
 Exemple neutre : « Cette marque a menti sur la composition de son produit. » Réponse : « Et les autres marques, elles n'ont jamais menti, peut-être ? »
 
