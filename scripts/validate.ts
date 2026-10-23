@@ -1,11 +1,16 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
-import { parseEntry, type EntryFrontMatter, type EntryLang, type EntryType } from './entry.ts';
+import { parseEntry, type EntryFrontMatter, type EntryLang, type EntryType, type OpenIssue } from './entry.ts';
 import { isAllowedLink } from './link-hosts.ts';
 
 export interface Issue {
   file: string;
   message: string;
+}
+
+export interface LocatedOpenIssue extends OpenIssue {
+  file: string;
+  slug: string;
 }
 
 interface LocatedEntry {
@@ -45,6 +50,24 @@ export function requiredHeadings(type: EntryType, lang: EntryLang): readonly str
   }
 }
 
+/** Open issues of every valid entry of a directory, in file order. Invalid entries are reported by validateDirectory. */
+export function listOpenIssues(directory: string): LocatedOpenIssue[] {
+  const located: LocatedOpenIssue[] = [];
+  const files = readdirSync(directory)
+    .filter((name) => name.endsWith('.md'))
+    .sort();
+  for (const name of files) {
+    const file = join(directory, name);
+    const result = parseEntry(readFileSync(file, 'utf8'));
+    if (result.ok) {
+      for (const openIssue of result.entry.front.open_issues ?? []) {
+        located.push({ ...openIssue, file, slug: result.entry.front.slug });
+      }
+    }
+  }
+  return located;
+}
+
 export function validateDirectory(directory: string): Issue[] {
   const issues: Issue[] = [];
   const entries: LocatedEntry[] = [];
@@ -79,6 +102,14 @@ function checkEntry(file: string, issues: Issue[]): LocatedEntry | null {
   let valid = true;
   if (front.slug !== expectedSlug) {
     issues.push({ file, message: `slug "${front.slug}" must equal the file name "${expectedSlug}"` });
+    valid = false;
+  }
+  const openIssueCount = front.open_issues?.length ?? 0;
+  if (front.status === 'published' && openIssueCount > 0) {
+    issues.push({
+      file,
+      message: `a published entry must not have open issues (${openIssueCount}): close them, or set the status back to "in-review"`
+    });
     valid = false;
   }
   const links = [

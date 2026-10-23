@@ -20,6 +20,7 @@
   },
   "scripts": {
     "validate": "node scripts/validate-cli.ts entries",
+    "issues": "node scripts/validate-cli.ts entries --issues",
     "check": "tsc --noEmit && node scripts/validate-cli.ts entries",
     "test": "node --test \"scripts/*.test.ts\""
   },

@@ -1,9 +1,11 @@
 import { readdirSync } from 'node:fs';
-import { validateDirectory } from './validate.ts';
+import { listOpenIssues, validateDirectory } from './validate.ts';
 
-const directory: string | undefined = process.argv[2];
+const args = process.argv.slice(2);
+const showIssues = args.includes('--issues');
+const directory: string | undefined = args.find((arg) => !arg.startsWith('--'));
 if (directory === undefined) {
-  console.error('usage: node scripts/validate-cli.ts <entries-directory>');
+  console.error('usage: node scripts/validate-cli.ts <entries-directory> [--issues]');
   process.exit(2);
 }
 
@@ -19,3 +21,19 @@ if (issues.length > 0) {
   process.exit(1);
 }
 console.log(`${count} entry file(s) valid`);
+
+const open = listOpenIssues(directory);
+if (open.length > 0) {
+  const perKind = new Map<string, number>();
+  for (const item of open) {
+    perKind.set(item.kind, (perKind.get(item.kind) ?? 0) + 1);
+  }
+  const summary = [...perKind].map(([kind, total]) => `${kind}: ${total}`).join(', ');
+  console.log(`${open.length} open issue(s) in ${new Set(open.map((item) => item.slug)).size} entries (${summary})`);
+  if (showIssues) {
+    for (const item of open) {
+      const tracker = item.issue === undefined ? '' : ` (#${item.issue})`;
+      console.log(`  ${item.slug}: [${item.kind}] ${item.note}${tracker}`);
+    }
+  }
+}
