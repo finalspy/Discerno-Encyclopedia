@@ -38,7 +38,7 @@ La polarisation affective désigne la tendance à juger négativement les membre
 
 ## Définitions concurrentes et débats
 
-L'idée d'un monde « de plus en plus binaire » est une affirmation empirique, dont les résultats varient. Boxell, Gentzkow et Shapiro (2024) comparent plusieurs pays : la polarisation affective a nettement augmenté dans certains (dont les États-Unis) et baissé dans d'autres. Le rôle des réseaux sociaux, des médias et des institutions politiques dans ces évolutions est discuté.
+L'idée que les sociétés se divisent de plus en plus est une affirmation empirique, dont les résultats varient. Boxell, Gentzkow et Shapiro (2024) comparent plusieurs pays : la polarisation affective a nettement augmenté dans certains (dont les États-Unis) et baissé dans d'autres. Le rôle des réseaux sociaux, des médias et des institutions politiques dans ces évolutions est discuté.
 
 La perception compte aussi : on surestime souvent l'extrémisme de ceux qui pensent autrement (Ahler et Sood, 2018), et une étude américaine décrit une large majorité « fatiguée » par les conflits, peu visible dans le débat public (Hawkins et al., 2018). Ces résultats portent sur des contextes précis et ne se généralisent pas sans précaution.
 
