@@ -6,7 +6,7 @@ title: Whataboutisme
 synonyms: [whataboutism, « et vous alors ? », détournement par comparaison]
 summary: Répondre à une critique en pointant un autre comportement, réel ou supposé, de celui qui critique, au lieu d'y répondre.
 status: in-review
-related: [ad-hominem, straw-man]
+related: [ad-hominem, label-misuse, straw-man]
 classifications:
   wikipedia: [Whataboutism]
 references:

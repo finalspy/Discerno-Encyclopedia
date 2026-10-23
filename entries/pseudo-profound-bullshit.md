@@ -7,7 +7,7 @@ synonyms: [baratin pseudo-profond, pseudo-profound bullshit]
 summary: Des phrases abstraites, solennelles et vagues donnent une impression de profondeur sans rien affirmer de vérifiable.
 status: in-review
 themes: [obscurantism-and-pseudoscience, influence-and-persuasion]
-related: [charlatanism, dr-fox-effect]
+related: [charlatanism, dr-fox-effect, thought-terminating-cliche]
 classifications:
   wikipedia: [Bullshit]
 references:

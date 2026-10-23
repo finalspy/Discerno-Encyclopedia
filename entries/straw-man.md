@@ -6,6 +6,7 @@ title: Homme de paille
 synonyms: [straw man, épouvantail]
 summary: Déformer la position de l'autre pour la réfuter plus facilement, au lieu de répondre à ce qu'il a réellement dit.
 status: in-review
+related: [ad-hominem, burden-of-proof-reversal, slippery-slope, whataboutism]
 classifications:
   semeval2023: [Straw_Man]
   wikipedia: [Straw_man]

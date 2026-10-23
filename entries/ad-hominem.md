@@ -6,7 +6,7 @@ title: Argument ad hominem
 synonyms: [attaque contre la personne, ad hominem]
 summary: Écarter un argument en attaquant la personne qui l'énonce, au lieu de répondre à l'argument.
 status: in-review
-related: [halo-effect, straw-man]
+related: [delegitimization-of-opponents, halo-effect, label-misuse, straw-man, whataboutism]
 classifications:
   wikipedia: [Ad_hominem]
 references:

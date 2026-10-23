@@ -5,7 +5,7 @@ lang: fr
 title: Effet de halo
 summary: Une impression générale, positive ou négative, déteint sur le jugement de qualités sans rapport avec elle.
 status: in-review
-related: [ad-hominem]
+related: [ad-hominem, cult-of-the-leader, dr-fox-effect]
 classifications:
   wikipedia: [Halo_effect]
 references:

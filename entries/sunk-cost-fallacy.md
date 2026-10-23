@@ -6,7 +6,7 @@ title: Biais des coûts irrécupérables
 synonyms: [sunk cost, escalade d'engagement]
 summary: On poursuit une action parce qu'on y a déjà investi du temps ou de l'argent, alors que ces coûts ne peuvent plus être récupérés.
 status: in-review
-related: [confirmation-bias]
+related: [confirmation-bias, foot-in-the-door]
 classifications:
   wikipedia: [Sunk_cost]
 references:

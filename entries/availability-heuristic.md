@@ -6,7 +6,7 @@ title: Heuristique de disponibilité
 synonyms: [biais de disponibilité]
 summary: On juge la fréquence ou la probabilité d'un événement à la facilité avec laquelle des exemples nous viennent à l'esprit.
 status: in-review
-related: [illusory-truth-effect]
+related: [anchoring, illusory-truth-effect]
 classifications:
   wikipedia: [Availability_heuristic]
 references:

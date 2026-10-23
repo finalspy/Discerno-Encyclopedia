@@ -7,7 +7,7 @@ synonyms: [agnotologie, doute organisé, manufactured doubt]
 summary: Mettre en avant l'incertitude d'un sujet pour retarder une décision, alors que les preuves principales sont établies.
 status: in-review
 themes: [obscurantism-and-pseudoscience, influence-and-persuasion]
-related: [science-denialism, cherry-picking]
+related: [cherry-picking, conspiracy-attribution, science-denialism]
 classifications:
   wikipedia: [Agnotology]
 references:

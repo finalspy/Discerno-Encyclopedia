@@ -7,7 +7,7 @@ synonyms: [obscurantism]
 summary: Attitude ou politique qui entrave l'accès au savoir et à l'examen critique, par le secret, l'interdit de questionner ou la valorisation de l'ignorance.
 status: in-review
 themes: [obscurantism-and-pseudoscience]
-related: [pseudoscience, science-denialism]
+related: [dogmatism, pseudoscience, science-denialism]
 classifications:
   wikipedia: [Obscurantism]
 references:

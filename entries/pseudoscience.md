@@ -7,7 +7,7 @@ synonyms: [pseudoscience]
 summary: Ensemble d'affirmations présentées comme scientifiques sans en respecter les exigences, dans un domaine que la science traite.
 status: in-review
 themes: [obscurantism-and-pseudoscience]
-related: [demarcation-problem, science-denialism, charlatanism]
+related: [charlatanism, demarcation-problem, obscurantism, science-denialism]
 classifications:
   wikipedia: [Pseudoscience]
 references:

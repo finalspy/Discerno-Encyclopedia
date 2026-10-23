@@ -7,7 +7,7 @@ synonyms: [charlatanerie, charlatan]
 summary: Prétendre posséder un savoir, une compétence ou un remède que l'on n'a pas, en général pour en tirer un profit.
 status: in-review
 themes: [obscurantism-and-pseudoscience, influence-and-persuasion]
-related: [barnum-effect, dr-fox-effect, pseudo-profound-bullshit]
+related: [barnum-effect, dr-fox-effect, dunning-kruger-effect, pseudo-profound-bullshit, pseudoscience]
 classifications:
   wikipedia: [Charlatan]
 references:

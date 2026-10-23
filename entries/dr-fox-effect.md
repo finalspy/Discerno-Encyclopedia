@@ -7,7 +7,7 @@ synonyms: [séduction éducative]
 summary: Un orateur assuré et expressif paraît compétent et clair même quand le contenu de son propos est vide.
 status: in-review
 themes: [cognitive-biases, obscurantism-and-pseudoscience]
-related: [charlatanism, halo-effect, pseudo-profound-bullshit]
+related: [barnum-effect, charlatanism, dunning-kruger-effect, halo-effect, pseudo-profound-bullshit]
 classifications:
   wikipedia: [Dr._Fox_effect]
 references:

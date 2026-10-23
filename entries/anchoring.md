@@ -6,7 +6,7 @@ title: Ancrage
 synonyms: [effet d'ancrage]
 summary: Une première valeur, même arbitraire, oriente durablement les estimations qui suivent.
 status: in-review
-related: [confirmation-bias]
+related: [availability-heuristic, confirmation-bias, framing-effect]
 classifications:
   wikipedia: [Anchoring_effect]
 references:

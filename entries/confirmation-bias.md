@@ -5,7 +5,7 @@ lang: fr
 title: Biais de confirmation
 summary: Tendance à rechercher, interpréter et retenir les informations qui confirment ce que l'on croit déjà.
 status: in-review
-related: [anchoring]
+related: [anchoring, cherry-picking, conspiracy-attribution, dogmatism, hindsight-bias, sunk-cost-fallacy, survivorship-bias]
 classifications:
   wikipedia: [Confirmation_bias]
 references:

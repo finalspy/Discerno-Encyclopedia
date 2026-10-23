@@ -7,7 +7,7 @@ synonyms: [cherry picking, argument des preuves choisies, preuve supprimée]
 summary: Ne retenir que les données ou les études qui vont dans le sens de la thèse et passer sous silence celles qui la contredisent.
 status: in-review
 themes: [argumentation, obscurantism-and-pseudoscience, statistics-and-data]
-related: [science-denialism, confirmation-bias, survivorship-bias]
+related: [confirmation-bias, manufactured-doubt, science-denialism, survivorship-bias]
 classifications:
   wikipedia: [Cherry_picking]
 references:

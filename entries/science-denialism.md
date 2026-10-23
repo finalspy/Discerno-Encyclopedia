@@ -7,7 +7,7 @@ synonyms: [dénialisme, science denial]
 summary: Refus de preuves solides par des procédés rhétoriques plutôt que par des arguments scientifiques, sur un sujet jugé dérangeant.
 status: in-review
 themes: [obscurantism-and-pseudoscience]
-related: [pseudoscience, manufactured-doubt, cherry-picking]
+related: [cherry-picking, manufactured-doubt, obscurantism, pseudoscience]
 classifications:
   wikipedia: [Science_denial]
 references:
