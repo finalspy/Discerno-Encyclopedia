@@ -26,6 +26,10 @@ references:
     author: Massimo Pigliucci, Maarten Boudry
     year: 2013
     url: https://openlibrary.org/works/OL17574691W
+  - title: Falsification and the Methodology of Scientific Research Programmes
+    author: Imre Lakatos
+    year: 1970
+    doi: 10.1017/cbo9781139171434.009
 ---
 ## Définition
 
@@ -33,7 +37,7 @@ Le problème de la démarcation est la question de savoir selon quels critères 
 
 ## Définitions concurrentes et débats
 
-Aucun critère unique n'a fait l'accord. Kuhn (1962) insiste sur le rôle des communautés et des paradigmes ; Lakatos propose d'évaluer des programmes de recherche sur la durée ; Laudan (1983) soutient que le problème est mal posé et qu'il vaut mieux évaluer des affirmations précises que classer des disciplines. Pigliucci et Boudry (2013) défendent un faisceau d'indices plutôt qu'une frontière nette.
+Aucun critère unique n'a fait l'accord. Kuhn (1962) insiste sur le rôle des communautés et des paradigmes ; Lakatos (1970) propose d'évaluer des programmes de recherche sur la durée ; Laudan (1983) soutient que le problème est mal posé et qu'il vaut mieux évaluer des affirmations précises que classer des disciplines. Pigliucci et Boudry (2013) défendent un faisceau d'indices plutôt qu'une frontière nette.
 
 Ce désaccord de fond ne signifie pas que « tout se vaut » : on peut trouver une affirmation mal fondée sans disposer d'une définition parfaite de la science.
 
