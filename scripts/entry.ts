@@ -3,7 +3,20 @@ import addFormatsModule from 'ajv-formats';
 import { parse } from 'yaml';
 import schema from '../schema/entry.schema.json' with { type: 'json' };
 
-export type EntryType = 'bias' | 'manipulation-technique' | 'fallacy' | 'rhetorical-device';
+export type EntryType =
+  | 'bias'
+  | 'manipulation-technique'
+  | 'fallacy'
+  | 'rhetorical-device'
+  | 'indicator'
+  | 'concept';
+export type EntryTheme =
+  | 'cognitive-biases'
+  | 'argumentation'
+  | 'influence-and-persuasion'
+  | 'obscurantism-and-pseudoscience'
+  | 'authoritarian-drift'
+  | 'statistics-and-data';
 export type EntryLang = 'en' | 'fr';
 export type EntryStatus = 'draft' | 'in-review' | 'published';
 export type Taxonomy = 'disarm' | 'semeval2023' | 'semeval2020' | 'logic' | 'wikipedia';
@@ -26,6 +39,8 @@ export interface EntryFrontMatter {
   summary: string;
   status: EntryStatus;
   last_reviewed?: string;
+  reviewed_by?: string;
+  themes?: EntryTheme[];
   related?: string[];
   classifications?: Partial<Record<Taxonomy, string[]>>;
   references?: Reference[];

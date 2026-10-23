@@ -4,7 +4,14 @@
   "title": "Encyclopedia entry front matter",
   "type": "object",
   "additionalProperties": false,
-  "required": ["slug", "type", "lang", "title", "summary", "status"],
+  "required": [
+    "slug",
+    "type",
+    "lang",
+    "title",
+    "summary",
+    "status"
+  ],
   "properties": {
     "slug": {
       "description": "Stable identifier, equal to the file name without extension. Never reused.",
@@ -15,22 +22,40 @@
       "description": "Former slugs of this entry. A renamed entry keeps its old slug here so that existing links keep resolving.",
       "type": "array",
       "uniqueItems": true,
-      "items": { "$ref": "#/$defs/slug" }
+      "items": {
+        "$ref": "#/$defs/slug"
+      }
     },
     "type": {
       "type": "string",
-      "enum": ["bias", "manipulation-technique", "fallacy", "rhetorical-device"]
+      "enum": [
+        "bias",
+        "manipulation-technique",
+        "fallacy",
+        "rhetorical-device",
+        "indicator",
+        "concept"
+      ]
     },
     "lang": {
       "type": "string",
-      "enum": ["en", "fr"]
+      "enum": [
+        "en",
+        "fr"
+      ]
     },
-    "title": { "type": "string", "minLength": 1 },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
     "synonyms": {
       "description": "Other names under which the concept is known.",
       "type": "array",
       "uniqueItems": true,
-      "items": { "type": "string", "minLength": 1 }
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "summary": {
       "description": "One sentence, plain text.",
@@ -41,7 +66,11 @@
     "status": {
       "description": "Review status. Only published entries are shown to users.",
       "type": "string",
-      "enum": ["draft", "in-review", "published"]
+      "enum": [
+        "draft",
+        "in-review",
+        "published"
+      ]
     },
     "last_reviewed": {
       "type": "string",
@@ -51,24 +80,38 @@
       "description": "Slugs of related entries.",
       "type": "array",
       "uniqueItems": true,
-      "items": { "$ref": "#/$defs/slug" }
+      "items": {
+        "$ref": "#/$defs/slug"
+      }
     },
     "classifications": {
       "description": "Identifiers of the entry in external taxonomies.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "disarm": { "$ref": "#/$defs/identifiers" },
-        "semeval2023": { "$ref": "#/$defs/identifiers" },
-        "semeval2020": { "$ref": "#/$defs/identifiers" },
-        "logic": { "$ref": "#/$defs/identifiers" },
-        "wikipedia": { "$ref": "#/$defs/identifiers" }
+        "disarm": {
+          "$ref": "#/$defs/identifiers"
+        },
+        "semeval2023": {
+          "$ref": "#/$defs/identifiers"
+        },
+        "semeval2020": {
+          "$ref": "#/$defs/identifiers"
+        },
+        "logic": {
+          "$ref": "#/$defs/identifiers"
+        },
+        "wikipedia": {
+          "$ref": "#/$defs/identifiers"
+        }
       }
     },
     "references": {
       "description": "Sources the entry relies on. Required once the entry is published.",
       "type": "array",
-      "items": { "$ref": "#/$defs/reference" }
+      "items": {
+        "$ref": "#/$defs/reference"
+      }
     },
     "adapted_from": {
       "description": "Third-party works the text is adapted from. Their license must allow it (CC BY-SA or compatible).",
@@ -76,46 +119,170 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["title", "url", "license"],
+        "required": [
+          "title",
+          "url",
+          "license"
+        ],
         "properties": {
-          "title": { "type": "string", "minLength": 1 },
-          "url": { "type": "string", "format": "uri" },
-          "license": { "type": "string", "enum": ["CC-BY-SA-4.0", "CC-BY-SA-3.0", "CC-BY-4.0", "CC0-1.0"] }
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "license": {
+            "type": "string",
+            "enum": [
+              "CC-BY-SA-4.0",
+              "CC-BY-SA-3.0",
+              "CC-BY-4.0",
+              "CC0-1.0"
+            ]
+          }
         }
       }
+    },
+    "themes": {
+      "description": "Thematic sections the entry belongs to.",
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "cognitive-biases",
+          "argumentation",
+          "influence-and-persuasion",
+          "obscurantism-and-pseudoscience",
+          "authoritarian-drift",
+          "statistics-and-data"
+        ]
+      }
+    },
+    "reviewed_by": {
+      "description": "Name or role of the external reviewer. Required to publish an entry of the authoritarian-drift theme.",
+      "type": "string",
+      "minLength": 1
     }
   },
   "allOf": [
     {
-      "if": { "properties": { "status": { "const": "published" } }, "required": ["status"] },
+      "if": {
+        "properties": {
+          "status": {
+            "const": "published"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
       "then": {
-        "required": ["last_reviewed", "references"],
-        "properties": { "last_reviewed": true, "references": { "type": "array", "minItems": 1 } }
+        "required": [
+          "last_reviewed",
+          "references"
+        ],
+        "properties": {
+          "last_reviewed": true,
+          "references": {
+            "type": "array",
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "published"
+          },
+          "themes": {
+            "type": "array",
+            "contains": {
+              "const": "authoritarian-drift"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "themes"
+        ]
+      },
+      "then": {
+        "required": [
+          "reviewed_by"
+        ],
+        "properties": {
+          "reviewed_by": true
+        }
       }
     }
   ],
   "$defs": {
-    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
     "identifiers": {
       "type": "array",
       "minItems": 1,
       "uniqueItems": true,
-      "items": { "type": "string", "minLength": 1 }
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "reference": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["title"],
+      "required": [
+        "title"
+      ],
       "anyOf": [
-        { "properties": { "url": true }, "required": ["url"] },
-        { "properties": { "author": true, "year": true }, "required": ["author", "year"] }
+        {
+          "properties": {
+            "url": true
+          },
+          "required": [
+            "url"
+          ]
+        },
+        {
+          "properties": {
+            "author": true,
+            "year": true
+          },
+          "required": [
+            "author",
+            "year"
+          ]
+        }
       ],
       "properties": {
-        "title": { "type": "string", "minLength": 1 },
-        "author": { "type": "string", "minLength": 1 },
-        "year": { "type": "integer", "minimum": 1500 },
-        "url": { "type": "string", "format": "uri" },
-        "accessed": { "type": "string", "format": "date" }
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1500
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "accessed": {
+          "type": "string",
+          "format": "date"
+        }
       }
     }
   }
