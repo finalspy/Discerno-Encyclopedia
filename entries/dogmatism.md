@@ -14,12 +14,15 @@ references:
   - title: The Open and Closed Mind
     author: Milton Rokeach
     year: 1960
+    url: https://openlibrary.org/works/OL6437112W
   - title: Political conservatism as motivated social cognition
     author: John T. Jost, Jack Glaser, Arie W. Kruglanski, Frank J. Sulloway
     year: 2003
+    doi: 10.1037/0033-2909.129.3.339
   - title: "At least bias is bipartisan: A meta-analytic comparison of partisan bias in liberals and conservatives"
     author: Peter H. Ditto, Brittany S. Liu, Cory J. Clark, Sean P. Wojcik, Eric E. Chen, Rebecca H. Grady, Jared B. Celniker, Joanne F. Zinger
     year: 2019
+    doi: 10.1177/1745691617746796
 ---
 ## Définition
 

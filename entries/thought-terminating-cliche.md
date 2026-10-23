@@ -14,6 +14,7 @@ references:
   - title: "Thought Reform and the Psychology of Totalism: A Study of \"Brainwashing\" in China"
     author: Robert Jay Lifton
     year: 1961
+    url: https://openlibrary.org/works/OL34619206W
 ---
 ## Comment ça marche
 

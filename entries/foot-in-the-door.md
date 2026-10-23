@@ -13,9 +13,11 @@ references:
   - title: "Compliance without pressure: the foot-in-the-door technique"
     author: Jonathan L. Freedman, Scott C. Fraser
     year: 1966
+    doi: 10.1037/h0023552
   - title: "Influence: The Psychology of Persuasion"
     author: Robert B. Cialdini
     year: 1984
+    url: https://openlibrary.org/works/OL3902892W
 ---
 ## Comment ça marche
 

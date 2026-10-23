@@ -14,9 +14,11 @@ references:
   - title: "Denialism: what is it and how should scientists respond?"
     author: Pascal Diethelm, Martin McKee
     year: 2009
+    doi: 10.1093/eurpub/ckn139
   - title: Science denial as a form of pseudoscience
     author: Sven Ove Hansson
     year: 2017
+    doi: 10.1016/j.shpsa.2017.05.002
 ---
 ## Comment ça marche
 

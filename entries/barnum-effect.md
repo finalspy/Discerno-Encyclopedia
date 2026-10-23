@@ -14,9 +14,11 @@ references:
   - title: "The fallacy of personal validation: a classroom demonstration of gullibility"
     author: Bertram R. Forer
     year: 1949
+    doi: 10.1037/h0059240
   - title: "Wanted — a good cookbook"
     author: Paul E. Meehl
     year: 1956
+    doi: 10.1037/h0044164
 ---
 ## Comment ça marche
 

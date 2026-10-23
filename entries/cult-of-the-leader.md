@@ -17,9 +17,11 @@ references:
   - title: "The Stalin Cult: A Study in the Alchemy of Power"
     author: Jan Plamper
     year: 2012
+    url: https://openlibrary.org/works/OL43357528W
   - title: Wirtschaft und Gesellschaft
     author: Max Weber
     year: 1922
+    url: https://openlibrary.org/works/OL1362906W
 ---
 ## Comment ça marche
 

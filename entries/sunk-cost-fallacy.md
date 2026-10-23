@@ -13,6 +13,7 @@ references:
   - title: The psychology of sunk cost
     author: Hal R. Arkes, Catherine Blumer
     year: 1985
+    doi: 10.1016/0749-5978(85)90049-4
 ---
 ## Comment ça marche
 

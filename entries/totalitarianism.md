@@ -14,18 +14,23 @@ references:
   - title: The Origins of Totalitarianism
     author: Hannah Arendt
     year: 1951
+    url: https://openlibrary.org/works/OL10460640W
   - title: Totalitarian Dictatorship and Autocracy
     author: Carl J. Friedrich, Zbigniew K. Brzezinski
     year: 1956
+    url: https://openlibrary.org/works/OL1333409W
   - title: Totalitarian and Authoritarian Regimes
     author: Juan J. Linz
     year: 2000
+    doi: 10.1515/9781685850043
   - title: "Totalitarianism: The Inner History of the Cold War"
     author: Abbott Gleason
     year: 1995
+    url: https://openlibrary.org/works/OL3466268W
   - title: "Beyond Totalitarianism: Stalinism and Nazism Compared"
     author: Sheila Fitzpatrick, Michael Geyer
     year: 2009
+    url: https://openlibrary.org/works/OL25676703W
 ---
 ## Définition
 

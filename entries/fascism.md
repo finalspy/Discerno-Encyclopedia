@@ -14,18 +14,23 @@ references:
   - title: The Anatomy of Fascism
     author: Robert O. Paxton
     year: 2004
+    url: https://openlibrary.org/works/OL3348964W
   - title: Ur-Fascism
     author: Umberto Eco
     year: 1995
+    url: https://www.nybooks.com/articles/1995/06/22/ur-fascism/
   - title: The Nature of Fascism
     author: Roger Griffin
     year: 1991
+    url: https://openlibrary.org/works/OL3804528W
   - title: A History of Fascism, 1914-1945
     author: Stanley G. Payne
     year: 1995
+    doi: 10.2307/jj.36075967
   - title: "Fascism: A Very Short Introduction"
     author: Kevin Passmore
     year: 2002
+    url: https://openlibrary.org/works/OL3343550W
 ---
 ## Définition
 

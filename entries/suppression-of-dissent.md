@@ -14,12 +14,15 @@ references:
   - title: How Democracies Die
     author: Steven Levitsky, Daniel Ziblatt
     year: 2018
+    url: https://openlibrary.org/works/OL18139175W
   - title: "Polyarchy: Participation and Opposition"
     author: Robert A. Dahl
     year: 1971
+    url: https://openlibrary.org/works/OL1890980W
   - title: Totalitarian Dictatorship and Autocracy
     author: Carl J. Friedrich, Zbigniew K. Brzezinski
     year: 1956
+    url: https://openlibrary.org/works/OL1333409W
 ---
 ## Comment ça marche
 

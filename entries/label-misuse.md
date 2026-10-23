@@ -12,12 +12,15 @@ references:
   - title: Concept misformation in comparative politics
     author: Giovanni Sartori
     year: 1970
+    doi: 10.2307/1958356
   - title: Meme, Counter-meme
     author: Mike Godwin
     year: 1994
+    url: https://www.wired.com/1994/10/godwin-if-2/
   - title: Ad Hominem Arguments
     author: Douglas N. Walton
     year: 1998
+    url: https://openlibrary.org/works/OL14852686W
 ---
 ## Définition
 

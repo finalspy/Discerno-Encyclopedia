@@ -14,15 +14,19 @@ references:
   - title: "Understanding political radicalization: The two-pyramids model"
     author: Clark McCauley, Sophia Moskalenko
     year: 2017
+    doi: 10.1037/amp0000062
   - title: "The staircase to terrorism: A psychological exploration"
     author: Fathali M. Moghaddam
     year: 2005
+    doi: 10.1037/0003-066x.60.2.161
   - title: "The psychology of radicalization and deradicalization: How significance quest impacts violent extremism"
     author: Arie W. Kruglanski, Michele J. Gelfand, Jocelyn J. Bélanger, Anna Sheveland, Malkanthi Hetiarachchi, Rohan Gunaratna
     year: 2014
+    doi: 10.1111/pops.12163
   - title: "Radicalization into violent extremism I: A review of social science theories"
     author: Randy Borum
     year: 2011
+    doi: 10.5038/1944-0472.4.4.1
 ---
 ## Définition
 

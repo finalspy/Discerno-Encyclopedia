@@ -12,9 +12,11 @@ references:
   - title: A constant error in psychological ratings
     author: Edward L. Thorndike
     year: 1920
+    doi: 10.1037/h0071663
   - title: "The halo effect: Evidence for unconscious alteration of judgments"
     author: Richard E. Nisbett, Timothy D. Wilson
     year: 1977
+    doi: 10.1037/0022-3514.35.4.250
 ---
 ## Comment ça marche
 

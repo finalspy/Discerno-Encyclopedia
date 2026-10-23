@@ -13,9 +13,11 @@ references:
   - title: "Availability: A heuristic for judging frequency and probability"
     author: Amos Tversky, Daniel Kahneman
     year: 1973
+    doi: 10.1016/0010-0285(73)90033-9
   - title: Judged frequency of lethal events
     author: Sarah Lichtenstein, Paul Slovic, Baruch Fischhoff, Mark Layman, Barbara Combs
     year: 1978
+    doi: 10.1037/0278-7393.4.6.551
 ---
 ## Comment ça marche
 

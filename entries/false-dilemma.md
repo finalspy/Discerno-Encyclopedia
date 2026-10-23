@@ -13,6 +13,7 @@ references:
   - title: "Informal Logic: A Handbook for Critical Argumentation"
     author: Douglas N. Walton
     year: 1989
+    url: https://openlibrary.org/works/OL14852718W
 ---
 ## Comment ça marche
 

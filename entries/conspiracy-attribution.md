@@ -14,12 +14,14 @@ references:
   - title: Understanding conspiracy theories
     author: Karen M. Douglas, Joseph E. Uscinski, Robbie M. Sutton, Aleksandra Cichocka, Turkay Nefes, Chee Siang Ang, Farzin Deravi
     year: 2019
+    doi: 10.1111/pops.12568
   - title: The Paranoid Style in American Politics
     author: Richard Hofstadter
     year: 1964
   - title: The Open Society and Its Enemies
     author: Karl R. Popper
     year: 1945
+    url: https://openlibrary.org/works/OL1984583W
 ---
 ## Comment ça marche
 

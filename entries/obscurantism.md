@@ -14,15 +14,19 @@ references:
   - title: Beantwortung der Frage Was ist Aufklärung?
     author: Immanuel Kant
     year: 1784
+    url: https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung%3F
   - title: Epistolae obscurorum virorum
     author: Crotus Rubeanus, Ulrich von Hutten et al.
     year: 1515
+    url: https://openlibrary.org/works/OL16747469W
   - title: Dialektik der Aufklärung
     author: Max Horkheimer, Theodor W. Adorno
     year: 1947
+    url: https://openlibrary.org/works/OL13605175W
   - title: Anti-Intellectualism in American Life
     author: Richard Hofstadter
     year: 1963
+    url: https://openlibrary.org/works/OL16445795W
 ---
 ## Définition
 

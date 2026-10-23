@@ -14,12 +14,15 @@ references:
   - title: "Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming"
     author: Naomi Oreskes, Erik M. Conway
     year: 2010
+    url: https://openlibrary.org/works/OL15626798W
   - title: Doubt Is Their Product
     author: David Michaels
     year: 2008
+    url: https://openlibrary.org/works/OL12255397W
   - title: "Agnotology: The Making and Unmaking of Ignorance"
     author: Robert N. Proctor, Londa Schiebinger
     year: 2008
+    url: https://openlibrary.org/works/OL18791608W
 ---
 ## Comment ça marche
 

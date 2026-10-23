@@ -13,12 +13,15 @@ references:
   - title: "Dehumanization: An integrative review"
     author: Nick Haslam
     year: 2006
+    doi: 10.1207/s15327957pspr1003_4
   - title: Moral disengagement in the perpetration of inhumanities
     author: Albert Bandura
     year: 1999
+    doi: 10.1207/s15327957pspr0303_3
   - title: "Bending Spines: The Propagandas of Nazi Germany and the German Democratic Republic"
     author: Randall L. Bytwerk
     year: 2004
+    url: https://openlibrary.org/works/OL5701729W
 ---
 ## Comment ça marche
 

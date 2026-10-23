@@ -18,9 +18,11 @@ references:
   - title: "Conjectures and Refutations: The Growth of Scientific Knowledge"
     author: Karl R. Popper
     year: 1963
+    url: https://openlibrary.org/works/OL43157731W
   - title: "Philosophy of Pseudoscience: Reconsidering the Demarcation Problem"
     author: Massimo Pigliucci, Maarten Boudry
     year: 2013
+    url: https://openlibrary.org/works/OL17574691W
 ---
 ## Définition
 

@@ -13,6 +13,7 @@ references:
   - title: "Judgment under Uncertainty: Heuristics and Biases"
     author: Amos Tversky, Daniel Kahneman
     year: 1974
+    doi: 10.1126/science.185.4157.1124
 ---
 ## Comment ça marche
 

@@ -13,9 +13,11 @@ references:
   - title: Bandwagon, snob, and Veblen effects in the theory of consumers' demand
     author: Harvey Leibenstein
     year: 1950
+    doi: 10.2307/1882692
   - title: "Studies of independence and conformity: I. A minority of one against a unanimous majority"
     author: Solomon E. Asch
     year: 1956
+    doi: 10.1037/h0093718
 ---
 ## Comment ça marche
 

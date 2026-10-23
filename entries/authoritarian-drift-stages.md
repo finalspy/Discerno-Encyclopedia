@@ -13,18 +13,23 @@ references:
   - title: The Anatomy of Fascism
     author: Robert O. Paxton
     year: 2004
+    url: https://openlibrary.org/works/OL3348964W
   - title: How Democracies Die
     author: Steven Levitsky, Daniel Ziblatt
     year: 2018
+    url: https://openlibrary.org/works/OL18139175W
   - title: The Breakdown of Democratic Regimes
     author: Juan J. Linz
     year: 1978
+    doi: 10.56021/9780801820229
   - title: On democratic backsliding
     author: Nancy Bermeo
     year: 2016
+    doi: 10.1353/jod.2016.0012
   - title: "A third wave of autocratization is here: what is new about it?"
     author: Anna Lührmann, Staffan I. Lindberg
     year: 2019
+    doi: 10.1080/13510347.2019.1582029
 ---
 ## Définition
 

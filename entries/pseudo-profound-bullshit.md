@@ -14,9 +14,11 @@ references:
   - title: On Bullshit
     author: Harry G. Frankfurt
     year: 2005
+    doi: 10.1515/9781400826537
   - title: On the reception and detection of pseudo-profound bullshit
     author: Gordon Pennycook, James Allan Cheyne, Nathaniel Barr, Derek J. Koehler, Jonathan A. Fugelsang
     year: 2015
+    doi: 10.1017/s1930297500006999
 ---
 ## Comment ça marche
 

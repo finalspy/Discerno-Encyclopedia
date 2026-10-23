@@ -13,6 +13,7 @@ references:
   - title: "Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments"
     author: Justin Kruger, David Dunning
     year: 1999
+    doi: 10.1037/0022-3514.77.6.1121
 ---
 ## Comment ça marche
 

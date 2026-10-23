@@ -12,9 +12,11 @@ references:
   - title: "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises"
     author: Raymond S. Nickerson
     year: 1998
+    doi: 10.1037/1089-2680.2.2.175
   - title: On the failure to eliminate hypotheses in a conceptual task
     author: Peter C. Wason
     year: 1960
+    doi: 10.1080/17470216008416717
 ---
 ## Comment ça marche
 

@@ -14,21 +14,27 @@ references:
   - title: Totalitarian and Authoritarian Regimes
     author: Juan J. Linz
     year: 2000
+    doi: 10.1515/9781685850043
   - title: The Authoritarian Personality
     author: Theodor W. Adorno, Else Frenkel-Brunswik, Daniel J. Levinson, R. Nevitt Sanford
     year: 1950
+    url: https://openlibrary.org/works/OL18426451W
   - title: Right-Wing Authoritarianism
     author: Bob Altemeyer
     year: 1981
+    url: https://openlibrary.org/works/OL21961399W
   - title: The Authoritarian Dynamic
     author: Karen Stenner
     year: 2005
+    doi: 10.1017/cbo9780511614712
   - title: "Finding the Loch Ness Monster: Left-wing authoritarianism in the United States"
     author: Lucian Gideon Conway III, Laura Janelle Gornick, Shannon C. Houck, Cecilia Anderson, Jennifer Stockert, Diana Sessoms, Kevin McCue
     year: 2018
+    doi: 10.1111/pops.12470
   - title: Clarifying the structure and nature of left-wing authoritarianism
     author: Thomas H. Costello, Shauna M. Bowes, Sean T. Stevens, Irwin Waldman, Arber Tasimi, Scott O. Lilienfeld
     year: 2022
+    doi: 10.1037/pspp0000341
 ---
 ## Définition
 

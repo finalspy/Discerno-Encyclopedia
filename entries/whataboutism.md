@@ -13,6 +13,7 @@ references:
   - title: Ad Hominem Arguments
     author: Douglas N. Walton
     year: 1998
+    url: https://openlibrary.org/works/OL14852686W
 ---
 ## Comment ça marche
 

@@ -13,6 +13,7 @@ references:
   - title: Frequency and the conference of referential validity
     author: Lynn Hasher, David Goldstein, Thomas Toppino
     year: 1977
+    doi: 10.1016/s0022-5371(77)80012-1
 ---
 ## Comment ça marche
 

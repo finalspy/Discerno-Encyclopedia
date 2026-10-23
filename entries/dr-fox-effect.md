@@ -14,6 +14,7 @@ references:
   - title: "The Doctor Fox Lecture: A Paradigm of Educational Seduction"
     author: Donald H. Naftulin, John E. Ware Jr., Frank A. Donnelly
     year: 1973
+    doi: 10.1097/00001888-197307000-00003
 ---
 ## Comment ça marche
 

@@ -13,9 +13,11 @@ references:
   - title: Burden of proof
     author: Douglas N. Walton
     year: 1988
+    doi: 10.1007/bf00178024
   - title: The burden of proof and its role in argumentation
     author: Ulrike Hahn, Mike Oaksford
     year: 2007
+    doi: 10.1007/s10503-007-9022-6
 ---
 ## Comment ça marche
 

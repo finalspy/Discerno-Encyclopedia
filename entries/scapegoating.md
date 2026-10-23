@@ -14,9 +14,11 @@ references:
   - title: The Nature of Prejudice
     author: Gordon W. Allport
     year: 1954
+    url: https://openlibrary.org/works/OL3420407W
   - title: Choice of scapegoats
     author: Peter Glick
     year: 2005
+    doi: 10.1002/9780470773963.ch15
 ---
 ## Comment ça marche
 

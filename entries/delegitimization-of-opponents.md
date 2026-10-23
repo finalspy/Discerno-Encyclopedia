@@ -14,9 +14,11 @@ references:
   - title: How Democracies Die
     author: Steven Levitsky, Daniel Ziblatt
     year: 2018
+    url: https://openlibrary.org/works/OL18139175W
   - title: The Breakdown of Democratic Regimes
     author: Juan J. Linz
     year: 1978
+    doi: 10.56021/9780801820229
 ---
 ## Comment ça marche
 

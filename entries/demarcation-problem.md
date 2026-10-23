@@ -17,12 +17,15 @@ references:
   - title: The Structure of Scientific Revolutions
     author: Thomas S. Kuhn
     year: 1962
+    url: https://openlibrary.org/works/OL45904278W
   - title: The demise of the demarcation problem
     author: Larry Laudan
     year: 1983
+    doi: 10.1007/978-94-009-7055-7_6
   - title: "Philosophy of Pseudoscience: Reconsidering the Demarcation Problem"
     author: Massimo Pigliucci, Maarten Boudry
     year: 2013
+    url: https://openlibrary.org/works/OL17574691W
 ---
 ## Définition
 

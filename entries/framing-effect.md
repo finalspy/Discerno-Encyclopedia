@@ -13,6 +13,7 @@ references:
   - title: The framing of decisions and the psychology of choice
     author: Amos Tversky, Daniel Kahneman
     year: 1981
+    doi: 10.1126/science.7455683
 ---
 ## Comment ça marche
 

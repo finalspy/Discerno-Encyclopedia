@@ -13,6 +13,7 @@ references:
   - title: Slippery Slope Arguments
     author: Douglas N. Walton
     year: 1992
+    doi: 10.1093/oso/9780198239253.001.0001
 ---
 ## Comment ça marche
 

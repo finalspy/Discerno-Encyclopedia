@@ -14,12 +14,15 @@ references:
   - title: "The fallacy of personal validation: a classroom demonstration of gullibility"
     author: Bertram R. Forer
     year: 1949
+    doi: 10.1037/h0059240
   - title: "The Doctor Fox Lecture: A Paradigm of Educational Seduction"
     author: Donald H. Naftulin, John E. Ware Jr., Frank A. Donnelly
     year: 1973
+    doi: 10.1097/00001888-197307000-00003
   - title: "Influence: The Psychology of Persuasion"
     author: Robert B. Cialdini
     year: 1984
+    url: https://openlibrary.org/works/OL3902892W
 ---
 ## Définition
 

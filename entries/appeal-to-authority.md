@@ -13,6 +13,7 @@ references:
   - title: "Appeal to Expert Opinion: Arguments from Authority"
     author: Douglas N. Walton
     year: 1997
+    url: https://openlibrary.org/works/OL14852687W
 ---
 ## Comment ça marche
 

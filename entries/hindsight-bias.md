@@ -13,6 +13,7 @@ references:
   - title: "Hindsight ≠ foresight: the effect of outcome knowledge on judgment under uncertainty"
     author: Baruch Fischhoff
     year: 1975
+    doi: 10.1037/0096-1523.1.3.288
 ---
 ## Comment ça marche
 
