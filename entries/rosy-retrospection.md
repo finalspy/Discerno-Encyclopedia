@@ -6,7 +6,7 @@ title: Rétrospective rose
 summary: "On se souvient des événements passés comme plus agréables qu'ils ne l'étaient sur le moment."
 status: in-review
 themes: [cognitive-biases]
-related: [declinism, positivity-effect]
+related: [declinism, positivity-effect, fading-affect-bias]
 classifications:
   wikipedia: [Rosy_retrospection]
 references:

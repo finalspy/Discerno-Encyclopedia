@@ -6,7 +6,7 @@ title: Illusion de la récence
 summary: "On croit qu'un mot ou un usage est récent parce qu'on vient de le remarquer, alors qu'il existe depuis longtemps."
 status: in-review
 themes: [cognitive-biases]
-related: [frequency-illusion]
+related: [frequency-illusion, declinism]
 classifications:
   wikipedia: [Recency_illusion]
 references:

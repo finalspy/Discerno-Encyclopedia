@@ -13,11 +13,10 @@ references:
   - title: Experimental tests of the endowment effect and the Coase theorem
     author: "Daniel Kahneman, Jack L. Knetsch, Richard H. Thaler"
     year: 1990
+    doi: 10.1086/261737
 open_issues:
   - kind: unverified
     note: "Fiche rédigée sans relecture humaine : les travaux cités et leur description restent à contrôler sur les textes."
-  - kind: source-missing
-    note: "Référence introuvable automatiquement, à confirmer ou à remplacer : Experimental tests of the endowment effect and the Coase theorem."
 ---
 ## Comment ça marche
 

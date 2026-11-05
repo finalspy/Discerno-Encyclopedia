@@ -7,8 +7,6 @@ summary: "On se souvient de ses opinions et attitudes passées comme plus proche
 status: in-review
 themes: [cognitive-biases]
 related: [hindsight-bias, choice-supportive-bias]
-classifications:
-  wikipedia: [Consistency_bias]
 references:
   - title: Relation of implicit theories to the construction of personal histories
     author: Michael Ross

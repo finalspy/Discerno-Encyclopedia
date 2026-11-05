@@ -6,6 +6,7 @@ title: Effet de mode
 synonyms: [effet de bandwagon, effet moutonnier, appel à la popularité]
 summary: On adopte une croyance ou un comportement parce que beaucoup d'autres le font, indépendamment de sa valeur.
 status: in-review
+themes: [cognitive-biases]
 related: [appeal-to-authority, illusory-truth-effect]
 classifications:
   wikipedia: [Bandwagon_effect]

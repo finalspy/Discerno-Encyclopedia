@@ -6,6 +6,7 @@ title: Biais rétrospectif
 synonyms: [biais de rétrospection, « je le savais »]
 summary: Une fois le résultat connu, on le juge après coup plus prévisible qu'il ne l'était.
 status: in-review
+themes: [cognitive-biases]
 related: [confirmation-bias]
 classifications:
   wikipedia: [Hindsight_bias]

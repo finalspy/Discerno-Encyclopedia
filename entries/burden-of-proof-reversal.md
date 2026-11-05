@@ -6,6 +6,7 @@ title: Inversion de la charge de la preuve
 synonyms: [renversement de la charge de la preuve, appel à l'ignorance, burden of proof]
 summary: Exiger que l'autre prouve que l'affirmation est fausse, au lieu de la prouver soi-même.
 status: in-review
+themes: [argumentation]
 related: [appeal-to-authority, straw-man]
 classifications:
   wikipedia: [Burden_of_proof_(philosophy)]

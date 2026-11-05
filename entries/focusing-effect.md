@@ -6,7 +6,7 @@ title: Effet de focalisation
 summary: "On accorde trop d'importance à un seul aspect d'une situation quand on prévoit ce qu'elle apportera."
 status: in-review
 themes: [cognitive-biases]
-related: [framing-effect]
+related: [framing-effect, impact-bias]
 classifications:
   wikipedia: [Focusing_illusion]
 references:

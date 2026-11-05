@@ -6,6 +6,7 @@ title: Effet de vérité illusoire
 synonyms: [effet de simple répétition]
 summary: Une affirmation répétée est jugée plus vraie, indépendamment de son exactitude.
 status: in-review
+themes: [cognitive-biases]
 related: [availability-heuristic, bandwagon-effect]
 classifications:
   wikipedia: [Illusory_truth_effect]

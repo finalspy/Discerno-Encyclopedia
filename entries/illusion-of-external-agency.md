@@ -7,8 +7,6 @@ summary: On attribue à une force extérieure bienveillante des améliorations q
 status: in-review
 themes: [cognitive-biases]
 related: [impact-bias, illusion-of-control]
-classifications:
-  wikipedia: [Illusion_of_external_agency]
 references:
   - title: The illusion of external agency
     author: "Daniel T. Gilbert, Ryan P. Brown, Elizabeth C. Pinel, Timothy D. Wilson"

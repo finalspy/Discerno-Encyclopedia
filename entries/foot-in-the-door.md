@@ -6,6 +6,7 @@ title: Pied dans la porte
 synonyms: [foot-in-the-door]
 summary: Obtenir un petit engagement d'abord pour rendre une demande plus grosse plus facile à faire accepter ensuite.
 status: in-review
+themes: [influence-and-persuasion]
 related: [sunk-cost-fallacy]
 classifications:
   wikipedia: [Foot-in-the-door_technique]

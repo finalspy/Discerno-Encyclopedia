@@ -6,6 +6,7 @@ title: Appel à l'autorité
 synonyms: [argument d'autorité, ipse dixit, appeal to authority]
 summary: Présenter l'opinion d'une personne ou d'une institution comme preuve suffisante, sans tenir compte de sa compétence sur le sujet ni des raisons avancées.
 status: in-review
+themes: [argumentation]
 related: [bandwagon-effect, burden-of-proof-reversal, cult-of-the-leader]
 classifications:
   wikipedia: [Argument_from_authority]

@@ -6,6 +6,7 @@ title: Pente glissante
 synonyms: [slippery slope, argument de la pente savonneuse, effet domino]
 summary: Affirmer qu'une première mesure entraînera inévitablement une série de conséquences de plus en plus graves, sans justifier chaque étape.
 status: in-review
+themes: [argumentation]
 related: [false-dilemma, straw-man]
 classifications:
   wikipedia: [Slippery_slope]

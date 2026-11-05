@@ -6,6 +6,7 @@ title: Faux dilemme
 synonyms: [fausse dichotomie, tiers exclu abusif, false dichotomy]
 summary: Présenter deux options comme les seules possibles alors qu'il en existe d'autres.
 status: in-review
+themes: [argumentation]
 related: [affective-polarization, framing-effect, slippery-slope]
 classifications:
   wikipedia: [False_dilemma]

@@ -6,6 +6,7 @@ title: Whataboutisme
 synonyms: [whataboutism, « et vous alors ? », détournement par comparaison]
 summary: Répondre à une critique en pointant un autre comportement, réel ou supposé, de celui qui critique, au lieu d'y répondre.
 status: in-review
+themes: [argumentation]
 open_issues:
   - kind: neutrality
     note: "Dykstra (2020) studies the term in American political commentary; check that the sentence citing it stays neutral."

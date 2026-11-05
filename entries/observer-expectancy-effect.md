@@ -7,18 +7,17 @@ synonyms: ["biais de l'expérimentateur", effet Rosenthal]
 summary: "Les attentes d'un chercheur ou d'un évaluateur influencent, sans le vouloir, les résultats qu'il obtient."
 status: in-review
 themes: [cognitive-biases, statistics-and-data]
-related: [confirmation-bias]
+related: [confirmation-bias, placebo-effect]
 classifications:
   wikipedia: [Observer-expectancy_effect]
 references:
   - title: The effect of experimenter bias on the performance of the albino rat
     author: "Robert Rosenthal, Kermit L. Fode"
     year: 1963
+    doi: 10.1002/bs.3830080302
 open_issues:
   - kind: unverified
     note: "Fiche rédigée sans relecture humaine : les travaux cités et leur description restent à contrôler sur les textes."
-  - kind: source-missing
-    note: "Référence introuvable automatiquement, à confirmer ou à remplacer : The effect of experimenter bias on the performance of the albino rat."
 ---
 ## Comment ça marche
 

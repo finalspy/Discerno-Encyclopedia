@@ -8,8 +8,6 @@ summary: "On obtient un accord sur des conditions avantageuses, puis on les dég
 status: in-review
 themes: [influence-and-persuasion]
 related: [foot-in-the-door, sunk-cost-fallacy]
-classifications:
-  wikipedia: [Lowball_(sales)]
 references:
   - title: "Low-ball procedure for producing compliance: Commitment then cost"
     author: "Robert B. Cialdini, John T. Cacioppo, Rodney Bassett, John A. Miller"

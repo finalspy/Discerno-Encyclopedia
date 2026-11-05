@@ -7,6 +7,7 @@ synonyms: [écart chaud-froid]
 summary: "À froid, on sous-estime l'influence qu'auront la faim, la peur ou la colère sur ses propres choix, et sur ceux des autres."
 status: in-review
 themes: [cognitive-biases]
+related: [projection-bias, impact-bias]
 classifications:
   wikipedia: [Empathy_gap]
 references:

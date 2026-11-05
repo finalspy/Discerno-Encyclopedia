@@ -6,6 +6,7 @@ title: Effet de cadrage
 synonyms: [framing]
 summary: Une même information conduit à des choix différents selon la façon dont elle est formulée, en gains ou en pertes.
 status: in-review
+themes: [cognitive-biases]
 related: [anchoring, false-dilemma]
 classifications:
   wikipedia: [Framing_effect_(psychology)]

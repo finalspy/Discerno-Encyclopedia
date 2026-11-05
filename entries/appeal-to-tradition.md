@@ -7,7 +7,7 @@ synonyms: [argumentum ad antiquitatem]
 summary: "On tient une pratique ou une idée pour juste au seul motif qu'elle existe depuis longtemps."
 status: in-review
 themes: [argumentation]
-related: [appeal-to-nature]
+related: [appeal-to-nature, status-quo-bias]
 classifications:
   wikipedia: [Appeal_to_tradition]
 references:

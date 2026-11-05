@@ -6,7 +6,7 @@ title: Illusion des séries
 summary: On voit des motifs ou des séries significatives dans des données aléatoires.
 status: in-review
 themes: [cognitive-biases, statistics-and-data]
-related: [illusory-correlation, texas-sharpshooter]
+related: [illusory-correlation, texas-sharpshooter, pareidolia]
 classifications:
   wikipedia: [Clustering_illusion]
 references:

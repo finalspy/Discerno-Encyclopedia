@@ -7,7 +7,7 @@ synonyms: [question présupposée]
 summary: "On pose une question contenant une affirmation non établie, si bien que toute réponse directe semble l'admettre."
 status: in-review
 themes: [argumentation, influence-and-persuasion]
-related: [framing-effect]
+related: [framing-effect, misinformation-effect]
 classifications:
   wikipedia: [Loaded_question]
 references:

@@ -7,7 +7,7 @@ synonyms: [cause unique]
 summary: "On explique un phénomène complexe par une seule cause, en ignorant les autres facteurs."
 status: in-review
 themes: [argumentation]
-related: [false-cause, scapegoating]
+related: [false-cause, scapegoating, illusion-of-explanatory-depth]
 classifications:
   wikipedia: [Fallacy_of_the_single_cause]
 references:

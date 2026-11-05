@@ -7,7 +7,7 @@ synonyms: [argumentum ad novitatem]
 summary: "On tient une idée ou un produit pour meilleur parce qu'il est nouveau."
 status: in-review
 themes: [argumentation, influence-and-persuasion]
-related: [appeal-to-tradition]
+related: [appeal-to-tradition, pro-innovation-bias]
 classifications:
   wikipedia: [Appeal_to_novelty]
 references:

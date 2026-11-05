@@ -6,7 +6,7 @@ title: Réflexe de Semmelweis
 summary: "On rejette une découverte parce qu'elle contredit les pratiques ou les idées établies, sans examiner ses preuves."
 status: in-review
 themes: [cognitive-biases]
-related: [conservatism-bias]
+related: [conservatism-bias, not-invented-here]
 classifications:
   wikipedia: [Semmelweis_reflex]
 references:

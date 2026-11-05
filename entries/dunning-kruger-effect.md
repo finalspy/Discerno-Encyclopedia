@@ -6,6 +6,7 @@ title: Effet Dunning-Kruger
 synonyms: [Dunning-Kruger]
 summary: Les personnes peu compétentes dans un domaine tendent à surestimer leurs performances, mais l'interprétation de ce résultat est discutée.
 status: in-review
+themes: [cognitive-biases]
 open_issues:
   - kind: unverified
     note: "Nuhfer et al. (2016) and Gignac and Zajenkowski (2020) are cited from their abstracts; check the claim against the papers."
