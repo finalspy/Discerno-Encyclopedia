@@ -1,4 +1,4 @@
-# Discerno Encyclopedia
+# Antimanip Encyclopedia
 
 Entries on cognitive biases, manipulation techniques, fallacies and rhetorical devices, with the schema and the validator that every entry must pass. The entries explain how each phenomenon works, why it is problematic, how to detect it and how to protect oneself. They are factual and nonpartisan: they describe techniques, never conclusions or political sides.
 
@@ -55,6 +55,6 @@ Copyright (c) 2026 YPETIT. Details are in [LICENSE](LICENSE).
 
 Reusing an entry requires credit, a link to the license and a note of any change. Suggested credit:
 
-> "Entry title", Discerno Encyclopedia, YPETIT, CC BY-SA 4.0, https://github.com/finalspy/Discerno-Encyclopedia
+> "Entry title", Antimanip Encyclopedia, YPETIT, CC BY-SA 4.0, https://github.com/finalspy/Discerno-Encyclopedia
 
 What you build from an entry is shared under the same license.
