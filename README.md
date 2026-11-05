@@ -11,7 +11,9 @@ The rules every entry follows are in [CHARTER.md](CHARTER.md). To contribute, se
 ```
 entries/                  one Markdown file per entry: entries/<slug>.md
 schema/entry.schema.json  JSON Schema (draft 2020-12) of the front matter
-scripts/                  validator (TypeScript, run natively by Node 24) and its tests
+scripts/                  validator and static site builder (TypeScript, run natively by Node 24), with their tests
+site/                     style sheet and script of the static site
+.github/workflows/        site build and deployment to GitHub Pages
 tests/fixtures/           valid and invalid sample entries used by the tests
 LICENSE                   copyright notice, licenses by kind of file, attribution
 LICENSES/                 license texts
@@ -31,6 +33,12 @@ A YAML front matter block followed by Markdown. Required fields: `slug`, `type`,
 - `open_issues` lists what is still to fix or to settle on an entry, whatever its `status`. Each item has a `kind` (`source-missing`, `unverified`, `link-missing`, `contested`, `neutrality`, `uncertain` or `other`), a short `note` and, optionally, the number of the tracker issue where the point is discussed (`issue`). A `published` entry has none: the validator rejects it. Keep notes short and factual; discussions belong in the issue.
 - References carry a stable outbound link when one exists: `doi` for articles and many books, otherwise `url`, limited to the hosts of `scripts/link-hosts.ts`. Wikipedia links come from `classifications.wikipedia`.
 - Sources are cited. Ideas and facts are reused, text is not, unless the source license allows it and `adapted_from` says so. Sources under a non-commercial license (CC BY-NC) are cited only.
+
+## Website
+
+Each push to `main` checks the entries, builds a static site with `pnpm run site:build` and deploys it to GitHub Pages. Published entries are shown. Entries in review are shown with a notice, except those of the themes listed in `REVIEW_REQUIRED_THEMES` (`scripts/site.ts`), which wait for their review. Drafts are never shown.
+
+In the repository settings, Pages must use "GitHub Actions" as its source.
 
 ## Commands
 
