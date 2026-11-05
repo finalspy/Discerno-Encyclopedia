@@ -29,7 +29,7 @@ The encyclopedia describes **forms** (techniques, signs, mechanisms), never conc
 
 ## Review
 
-14. `draft` then `in-review` then `published`. Entries in the sensitive section are published only after a review by someone qualified in the field (history, political science, psychology, philosophy of science), recorded with the review date. An entry that still lists open issues (`open_issues`) is not published until each one is closed.
+14. `draft` then `in-review` then `published`. Entries in the sensitive section are published only after a review by someone qualified in the field (history, political science, psychology, philosophy of science), recorded with the review date. An entry that still lists open issues (`open_issues`) is not published until each one is closed. An entry in review may appear on the public site with a visible notice, except entries of the sensitive section, which wait for their review.
 15. A published entry is corrected in public: the history of changes is the git history.
 16. Nothing here is a verdict on a person or an organization.
 
