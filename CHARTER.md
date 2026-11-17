@@ -6,7 +6,7 @@ The encyclopedia describes **forms** (techniques, signs, mechanisms), never conc
 
 ## Naming
 
-1. No currently active political party or movement, no living person and no living political actor is named in any entry or example. Historical regimes and movements may be named when the entry is about them. Authors of references are cited as authors, not as examples.
+1. No currently active political party or movement, no living person and no living political actor is named in any entry or example. Historical regimes and movements may be named when the entry is about them. Authors of references are cited as authors, not as examples. A law, principle or effect named after a living person keeps its usual name as its title; the text names that person only as the author of a listed reference, otherwise it describes them by their role ("the programmer it is named after").
 2. Entries describe behaviors in texts and institutions, not identities or groups.
 3. The word "fascist" and its derivatives are never applied to a current actor. "Fascism" is a historical concept described through the competing scholarly definitions.
 4. Illustrative examples are either invented and neutral, or historical and documented. An entry about a political ideology uses at least two historical instances from opposed ideological camps.
