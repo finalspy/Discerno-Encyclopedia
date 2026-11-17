@@ -16,7 +16,8 @@ export type EntryTheme =
   | 'influence-and-persuasion'
   | 'obscurantism-and-pseudoscience'
   | 'authoritarian-drift'
-  | 'statistics-and-data';
+  | 'statistics-and-data'
+  | 'laws-and-adages';
 export type EntryLang = 'en' | 'fr';
 export type EntryStatus = 'draft' | 'in-review' | 'published';
 export type Taxonomy = 'disarm' | 'semeval2023' | 'semeval2020' | 'logic' | 'wikipedia';
