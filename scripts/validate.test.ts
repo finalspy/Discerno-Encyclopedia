@@ -23,6 +23,10 @@ test('accepts a published authoritarian-drift entry once it records its reviewer
   assert.deepEqual(messages('drift-published-reviewed'), []);
 });
 
+test('accepts a laws-and-adages entry that states its kind of statement', () => {
+  assert.deepEqual(messages('law-valid'), []);
+});
+
 test('accepts an in-review entry that lists its open issues', () => {
   assert.deepEqual(messages('open-issues-valid'), []);
 });
@@ -56,7 +60,8 @@ const rejected: ReadonlyArray<readonly [string, string]> = [
   ['indicator-missing-response', 'missing section "## How to respond"'],
   ['drift-published-unreviewed', "must have required property 'reviewed_by'"],
   ['open-issues-invalid-kind', 'must be equal to one of the allowed values'],
-  ['open-issues-published', 'a published entry must not have open issues (1)']
+  ['open-issues-published', 'a published entry must not have open issues (1)'],
+  ['law-missing-status', 'a laws-and-adages entry must state what kind of statement it is in a paragraph starting with "Status:"']
 ];
 
 for (const [name, expected] of rejected) {

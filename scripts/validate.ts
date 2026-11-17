@@ -30,6 +30,12 @@ const INDICATOR_HEADINGS: Record<EntryLang, readonly string[]> = {
   fr: [...PHENOMENON_HEADINGS.fr, 'Comment réagir']
 };
 
+/** Opening of the paragraph that states what kind of statement a law or adage is (see README.md). */
+const STATUS_PARAGRAPH: Record<EntryLang, string> = {
+  en: 'Status:',
+  fr: 'Statut :'
+};
+
 const CONCEPT_HEADINGS: Record<EntryLang, readonly string[]> = {
   en: ['Definition', 'Competing definitions and debates', 'Why it helps to discern'],
   fr: ['Définition', 'Définitions concurrentes et débats', 'Pourquoi cela aide à discerner']
@@ -131,6 +137,14 @@ function checkEntry(file: string, issues: Issue[]): LocatedEntry | null {
         issues.push({ file, message: `missing section "## ${required}"` });
         valid = false;
       }
+    }
+    const opening = STATUS_PARAGRAPH[front.lang];
+    if ((front.themes ?? []).includes('laws-and-adages') && !new RegExp(`^${opening}`, 'm').test(body)) {
+      issues.push({
+        file,
+        message: `a laws-and-adages entry must state what kind of statement it is in a paragraph starting with "${opening}"`
+      });
+      valid = false;
     }
   }
   return valid ? { file, front } : null;
