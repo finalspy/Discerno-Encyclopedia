@@ -6,8 +6,8 @@ title: Loi de futilité de Parkinson
 synonyms: [effet abri à vélos]
 summary: "Un groupe consacre un temps disproportionné aux détails faciles à comprendre, au détriment des questions complexes et importantes."
 status: in-review
-themes: [cognitive-biases]
-related: [focusing-effect]
+themes: [laws-and-adages, cognitive-biases]
+related: [focusing-effect, parkinsons-law]
 classifications:
   wikipedia: [Law_of_triviality]
 references:
@@ -22,6 +22,8 @@ open_issues:
 ## Comment ça marche
 
 Parkinson (1958) imagine un comité qui approuve vite une centrale nucléaire, puis débat longuement de l'abri à vélos, sujet sur lequel chacun se sent compétent. Il s'agit d'une observation satirique plus que d'un résultat expérimental.
+
+Statut : une observation satirique, pas une loi établie.
 
 ## Pourquoi c'est problématique
 

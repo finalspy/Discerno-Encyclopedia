@@ -5,8 +5,8 @@ lang: fr
 title: "Rasoir d'Ockham"
 summary: "À pouvoir explicatif égal, il est préférable de retenir l'hypothèse qui suppose le moins d'éléments."
 status: in-review
-themes: [argumentation]
-related: [conjunction-fallacy, causal-oversimplification]
+themes: [laws-and-adages, argumentation]
+related: [conjunction-fallacy, causal-oversimplification, hanlons-razor, hitchens-razor]
 classifications:
   wikipedia: ["Occam's_razor"]
 references:
@@ -21,6 +21,8 @@ open_issues:
 ## Définition
 
 Le principe propose de ne pas multiplier les hypothèses sans nécessité. Il ne dit pas que l'explication la plus simple est toujours vraie : il sert à choisir entre des hypothèses qui expliquent aussi bien les faits.
+
+Statut : un principe de méthode, pas une affirmation sur le monde.
 
 ## Définitions concurrentes et débats
 

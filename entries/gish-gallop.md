@@ -7,7 +7,7 @@ synonyms: [Gish gallop]
 summary: "On aligne très vite une multitude d'affirmations faibles, de sorte qu'il est impossible de toutes les réfuter dans le temps disponible."
 status: in-review
 themes: [argumentation]
-related: [burden-of-proof-reversal, cherry-picking]
+related: [burden-of-proof-reversal, cherry-picking, brandolinis-law]
 classifications:
   wikipedia: [Gish_gallop]
 references:

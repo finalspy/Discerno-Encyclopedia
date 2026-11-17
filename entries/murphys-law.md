@@ -5,8 +5,8 @@ lang: fr
 title: Loi de Murphy
 summary: "L'adage selon lequel tout ce qui peut mal tourner tournera mal, qui n'est pas une loi au sens scientifique."
 status: in-review
-themes: [cognitive-biases]
-related: [availability-heuristic, negativity-bias]
+themes: [laws-and-adages, cognitive-biases]
+related: [availability-heuristic, negativity-bias, parkinsons-law]
 classifications:
   wikipedia: ["Murphy's_law"]
 references:
@@ -21,6 +21,8 @@ open_issues:
 ## Définition
 
 Cet adage est souvent attribué à un ingénieur américain des années 1940. Spark (2006) retrace son histoire. Il peut rappeler utilement de prévoir les défaillances.
+
+Statut : un adage humoristique, pas une loi scientifique.
 
 ## Définitions concurrentes et débats
 

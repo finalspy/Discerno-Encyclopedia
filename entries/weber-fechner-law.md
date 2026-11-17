@@ -5,7 +5,7 @@ lang: fr
 title: Loi de Weber-Fechner
 summary: "La sensation et l'estimation de grands nombres dépendent de rapports plutôt que de différences absolues."
 status: in-review
-themes: [statistics-and-data]
+themes: [laws-and-adages, statistics-and-data]
 related: [contrast-effect, money-illusion]
 classifications:
   wikipedia: [Weber–Fechner_law]
@@ -21,6 +21,8 @@ open_issues:
 ## Définition
 
 Une même différence se remarque moins à mesure que les quantités augmentent : ajouter 10 € à 20 € se perçoit davantage que l'ajouter à 2 000 €. Dehaene (2003) relie ce principe à notre représentation mentale des nombres.
+
+Statut : une loi empirique de la psychophysique, qui décrit une tendance approximative.
 
 ## Définitions concurrentes et débats
 
