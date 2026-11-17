@@ -67,3 +67,7 @@ Reusing an entry requires credit, a link to the license and a note of any change
 > "Entry title", Antimanip Encyclopedia, YPETIT, CC BY-SA 4.0, https://github.com/finalspy/Discerno-Encyclopedia
 
 What you build from an entry is shared under the same license.
+
+## Sources of the topic list
+
+The choice of the cognitive bias entries follows the [Cognitive Bias Codex](https://commons.wikimedia.org/w/index.php?curid=58115523) by John Manoogian III (jm3), CC BY-SA 4.0, itself drawn from the Wikipedia article [List of cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases) (CC BY-SA 4.0). Only the list of topics and their grouping were used: no text or image from either is reproduced here, and each entry relies on its own references.
