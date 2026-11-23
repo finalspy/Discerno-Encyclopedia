@@ -133,6 +133,17 @@ describe('renderSite', () => {
     assert.doesNotMatch(html, /<select data-filter-type/);
   });
 
+  it('opens an entry from its whole card, and filters on the type of its badge', () => {
+    const html = renderSite([entry('a'), entry('b', { type: 'fallacy' })], CONTEXT).get('index.html') ?? '';
+    assert.equal((html.match(/<a class="entry-card__link" href="[ab]\.html">/g) ?? []).length, 2);
+    assert.match(html, /<button type="button" class="badge badge--type badge--filter" data-type="fallacy" data-type-only aria-label="Afficher seulement : Sophisme"/);
+  });
+
+  it('links the type badge of an entry page to the list filtered on that type', () => {
+    const html = renderSite([entry('a', { type: 'fallacy' })], CONTEXT).get('a.html') ?? '';
+    assert.match(html, /<a class="badge badge--type badge--link" data-type="fallacy" href="index.html\?types=fallacy"/);
+  });
+
   it('marks an entry in review with a notice', () => {
     const pages = renderSite([entry('a')], CONTEXT);
     assert.match(pages.get('a.html') ?? '', /Fiche en cours de relecture/);

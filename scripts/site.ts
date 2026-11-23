@@ -213,7 +213,7 @@ export function renderEntryPage(entry: SiteEntry, visible: ReadonlyMap<string, S
       ? ''
       : '<p class="notice">Fiche en cours de relecture : ses sources sont citées, mais elle n\'a pas encore été validée par un relecteur humain.</p>';
   const content = `<article class="entry" data-type="${front.type}">
-<p class="entry__meta"><span class="badge badge--type" data-type="${front.type}">${escapeHtml(TYPE_LABELS[front.type])}</span> <span class="badge badge--status">${statusLabel(front)}</span></p>
+<p class="entry__meta"><a class="badge badge--type badge--link" data-type="${front.type}" href="index.html?types=${front.type}" title="Voir toutes les fiches de ce type">${escapeHtml(TYPE_LABELS[front.type])}</a> <span class="badge badge--status">${statusLabel(front)}</span></p>
 <h1>${escapeHtml(front.title)}</h1>
 <p class="entry__summary">${escapeHtml(front.summary)}</p>
 ${notice}
@@ -229,6 +229,7 @@ ${related.length === 0 ? '' : `<h2>Voir aussi</h2>\n<ul>\n${related.join('\n')}\
 export function renderIndexPage(entries: readonly SiteEntry[], context: SiteContext): string {
   const present = TYPE_ORDER.filter((type) => entries.some((entry) => entry.front.type === type));
   // One toggle chip per type, in its color, with its count; several can be on at once (as in the application).
+  // The whole card opens its entry (its title link stretches over it); its type badge shows that type alone.
   const chips = present
     .map((type) => {
       const count = entries.filter((entry) => entry.front.type === type).length;
@@ -240,9 +241,9 @@ export function renderIndexPage(entries: readonly SiteEntry[], context: SiteCont
     .map(({ front }) => {
       const haystack = [front.title, front.summary, ...(front.synonyms ?? [])].join(' ').toLocaleLowerCase('fr');
       return `<li class="entry-card" data-type="${front.type}" data-status="${front.status}" data-title="${escapeHtml(front.title)}" data-search="${escapeHtml(haystack)}">
-<a href="${escapeHtml(front.slug)}.html"><strong>${escapeHtml(front.title)}</strong></a>
+<a class="entry-card__link" href="${escapeHtml(front.slug)}.html"><strong>${escapeHtml(front.title)}</strong></a>
 <p>${escapeHtml(front.summary)}</p>
-<p class="entry__meta"><span class="badge badge--type" data-type="${front.type}">${escapeHtml(TYPE_LABELS[front.type])}</span> <span class="badge badge--status">${statusLabel(front)}</span></p>
+<p class="entry__meta"><button type="button" class="badge badge--type badge--filter" data-type="${front.type}" data-type-only aria-label="Afficher seulement : ${escapeHtml(TYPE_LABELS[front.type])}" title="Afficher seulement ce type">${escapeHtml(TYPE_LABELS[front.type])}</button> <span class="badge badge--status">${statusLabel(front)}</span></p>
 </li>`;
     })
     .join('\n');

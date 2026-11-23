@@ -347,6 +347,7 @@ h1::after {
 /* Each card is marked with the color of its entry type. */
 .entry-card {
   --type-color: var(--brand-teal);
+  position: relative;
   padding: var(--space);
   border: 1px solid var(--color-border);
   border-left: 5px solid var(--type-color);
@@ -367,13 +368,34 @@ h1::after {
   display: none;
 }
 
-.entry-card > a {
+.entry-card__link {
   color: var(--color-heading);
   text-decoration: none;
 }
 
-.entry-card > a:hover {
+/* The title link covers the whole card, so any part of it opens the entry; the type badge stays above it. */
+.entry-card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+}
+
+.entry-card:hover .entry-card__link {
   text-decoration: underline;
+}
+
+.entry-card__link:focus-visible {
+  outline: none;
+}
+
+.entry-card__link:focus-visible::after {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.entry-card:hover {
+  cursor: pointer;
 }
 
 .entry-card p {
@@ -452,6 +474,23 @@ h1::after {
   border-color: var(--type-color);
   background: transparent;
   color: var(--type-color);
+}
+
+/* A type badge that filters the list (on a card) or opens the list filtered (on an entry page). */
+.badge--filter,
+.badge--link {
+  position: relative;
+  z-index: 1;
+  font-family: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.badge--filter:hover,
+.badge--link:hover {
+  background: var(--type-color);
+  color: var(--color-surface);
 }
 
 .notice {
