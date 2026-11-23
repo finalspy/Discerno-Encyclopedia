@@ -11,6 +11,11 @@ if (entriesDirectory === undefined || outputDirectory === undefined) {
   process.exit(2);
 }
 
+/** A warning of the build; in GitHub Actions, an annotation shown on the page of the run. */
+function warn(message: string): void {
+  console.warn(process.env.GITHUB_ACTIONS === 'true' ? `::warning::${message}` : `WARNING: ${message}`);
+}
+
 const analytics = readAnalytics(process.env);
 if (!analytics.ok) {
   console.error(analytics.error);
@@ -23,10 +28,17 @@ if (!donation.ok) {
   process.exit(1);
 }
 
+if (analytics.analytics === null) {
+  warn('no visit statistics: PUBLIC_UMAMI_SRC and PUBLIC_UMAMI_WEBSITE_ID are unset');
+}
+if (donation.donationUrl === null) {
+  warn('no donation button: PUBLIC_DONATION_URL is unset');
+}
+
 // A missing legal fact never fails the build: the page shows its marker, and the log lists it.
 const legal = readLegalFacts(process.env);
 if (legal.missing.length > 0) {
-  console.warn(`WARNING: legal notice incomplete, missing: ${legal.missing.join(' ')}`);
+  warn(`legal notice incomplete, missing: ${legal.missing.join(' ')}`);
 }
 
 const entries: SiteEntry[] = readdirSync(entriesDirectory)
