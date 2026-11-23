@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import type { EntryFrontMatter } from './entry.ts';
-import { isVisibleOnSite, renderSite, type SiteEntry } from './site.ts';
+import { isVisibleOnSite, readAnalytics, renderSite, type SiteEntry } from './site.ts';
 
-const CONTEXT = { version: '1.0.0', buildDate: '2026-11-05', repositoryUrl: 'https://example.org/repo' };
+const CONTEXT = { version: '1.0.0', buildDate: '2026-11-05', repositoryUrl: 'https://example.org/repo', analytics: null };
 
 function front(slug: string, extra: Partial<EntryFrontMatter> = {}): EntryFrontMatter {
   return { slug, type: 'bias', lang: 'fr', title: `Titre ${slug}`, summary: 'Résumé.', status: 'in-review', ...extra };
@@ -29,7 +29,41 @@ describe('isVisibleOnSite', () => {
   });
 });
 
+describe('readAnalytics', () => {
+  it('disables the tracker when neither setting is given', () => {
+    assert.deepEqual(readAnalytics({}), { ok: true, analytics: null });
+    assert.deepEqual(readAnalytics({ PUBLIC_UMAMI_SRC: '', PUBLIC_UMAMI_WEBSITE_ID: '' }), { ok: true, analytics: null });
+  });
+
+  it('reads both settings', () => {
+    assert.deepEqual(readAnalytics({ PUBLIC_UMAMI_SRC: 'https://stats.example.org/script.js', PUBLIC_UMAMI_WEBSITE_ID: 'id-1' }), {
+      ok: true,
+      analytics: { src: 'https://stats.example.org/script.js', websiteId: 'id-1' }
+    });
+  });
+
+  it('rejects a half configuration and a non-https URL', () => {
+    assert.equal(readAnalytics({ PUBLIC_UMAMI_SRC: 'https://stats.example.org/script.js' }).ok, false);
+    assert.equal(readAnalytics({ PUBLIC_UMAMI_WEBSITE_ID: 'id-1' }).ok, false);
+    assert.equal(readAnalytics({ PUBLIC_UMAMI_SRC: 'http://stats.example.org/script.js', PUBLIC_UMAMI_WEBSITE_ID: 'id-1' }).ok, false);
+  });
+});
+
 describe('renderSite', () => {
+  it('adds the Umami script to every page when it is configured', () => {
+    const analytics = { src: 'https://stats.example.org/script.js', websiteId: 'id-1' };
+    const pages = renderSite([entry('a')], { ...CONTEXT, analytics });
+    for (const html of pages.values()) {
+      assert.match(html, /<script defer src="https:\/\/stats\.example\.org\/script\.js" data-website-id="id-1" data-do-not-track="true"><\/script>/);
+    }
+  });
+
+  it('adds no tracker when it is not configured', () => {
+    for (const html of renderSite([entry('a')], CONTEXT).values()) {
+      assert.doesNotMatch(html, /data-website-id/);
+    }
+  });
+
   it('writes an index and one page per visible entry', () => {
     const pages = renderSite([entry('a'), entry('b', { status: 'draft' })], CONTEXT);
     assert.deepEqual([...pages.keys()], ['index.html', 'a.html']);

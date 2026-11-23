@@ -41,6 +41,8 @@ Each push to `main` checks the entries, builds a static site with `pnpm run site
 
 In the repository settings, Pages must use "GitHub Actions" as its source.
 
+Visits are counted with Umami, without cookies and with Do Not Track respected, when the repository variables `PUBLIC_UMAMI_SRC` (https URL of the tracker script) and `PUBLIC_UMAMI_WEBSITE_ID` are set (Settings > Secrets and variables > Actions > Variables). Neither set: no tracker. Only one set: the build fails.
+
 ## Commands
 
 Requirements: Node 24 and pnpm.

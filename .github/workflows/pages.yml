@@ -28,6 +28,10 @@ jobs:
       - run: pnpm run check
       - run: pnpm run test
       - run: pnpm run site:build
+        env:
+          # Repository variables (Settings > Secrets and variables > Actions > Variables). Both unset: no tracker.
+          PUBLIC_UMAMI_SRC: ${{ vars.PUBLIC_UMAMI_SRC }}
+          PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.PUBLIC_UMAMI_WEBSITE_ID }}
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist/site

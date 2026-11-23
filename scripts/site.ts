@@ -22,10 +22,49 @@ export interface SiteEntry {
   body: string;
 }
 
+/** Umami tracker of the site: script URL and website id. */
+export interface SiteAnalytics {
+  src: string;
+  websiteId: string;
+}
+
 export interface SiteContext {
   version: string;
   buildDate: string;
   repositoryUrl: string;
+  /** null: no tracker on the pages. */
+  analytics: SiteAnalytics | null;
+}
+
+export type AnalyticsSettings =
+  | { ok: true; analytics: SiteAnalytics | null }
+  | { ok: false; error: string };
+
+/**
+ * Reads the Umami settings from the environment: PUBLIC_UMAMI_SRC (https URL of the script) and
+ * PUBLIC_UMAMI_WEBSITE_ID. Both unset: no tracker. Only one set, or an invalid URL: an error, so that a broken
+ * configuration fails the build instead of silently dropping the statistics.
+ */
+export function readAnalytics(source: Readonly<Record<string, string | undefined>>): AnalyticsSettings {
+  const src = source.PUBLIC_UMAMI_SRC ?? '';
+  const websiteId = source.PUBLIC_UMAMI_WEBSITE_ID ?? '';
+  if (src === '' && websiteId === '') {
+    return { ok: true, analytics: null };
+  }
+  if (src === '' || websiteId === '') {
+    return { ok: false, error: 'PUBLIC_UMAMI_SRC and PUBLIC_UMAMI_WEBSITE_ID must be set together' };
+  }
+  if (!/^https:\/\/[^\s"<>]+$/.test(src)) {
+    return { ok: false, error: 'PUBLIC_UMAMI_SRC must be an https URL' };
+  }
+  return { ok: true, analytics: { src, websiteId } };
+}
+
+function analyticsScript(analytics: SiteAnalytics | null): string {
+  if (analytics === null) {
+    return '';
+  }
+  return `<script defer src="${escapeHtml(analytics.src)}" data-website-id="${escapeHtml(analytics.websiteId)}" data-do-not-track="true"></script>\n`;
 }
 
 export function escapeHtml(text: string): string {
@@ -74,7 +113,7 @@ function page(title: string, description: string, assetPrefix: string, content: 
 <meta name="description" content="${escapeHtml(description)}">
 <link rel="stylesheet" href="${assetPrefix}site.css">
 <script src="${assetPrefix}site.js" defer></script>
-</head>
+${analyticsScript(context.analytics)}</head>
 <body>
 <header class="site-header">
 <a class="site-header__brand" href="${assetPrefix}index.html">Encyclopédie Antimanip</a>
