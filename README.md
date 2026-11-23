@@ -57,6 +57,7 @@ translated_from:
 
 - `pnpm run translations hash entries <slug>` prints the `hash` to write (in quotes: YAML would read some values as numbers).
 - `pnpm run translations missing entries <lang>` lists the entries without a translation in a language.
+- `pnpm run translations stamp entries <lang>` writes the `hash` into every translation of a language written with `hash: "STAMP"`.
 - When the title, synonyms, summary or body of the source change, its translations become outdated: `pnpm run validate` lists them with a warning, and the sites show a notice until the translation and its `hash` are updated.
 - A translation is `in-review` until a reader of its language has reviewed it, and cannot be `published` before its source.
 
