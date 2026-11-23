@@ -36,16 +36,29 @@
   }
 
   var search = document.querySelector('[data-filter-search]');
-  var type = document.querySelector('[data-filter-type]');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('[data-type-chip]'));
+  var all = document.querySelector('[data-type-all]');
   var sort = document.querySelector('[data-sort]');
   var count = document.querySelector('[data-count]');
   var cards = Array.prototype.slice.call(list.children);
 
+  function isOn(chip) {
+    return chip.getAttribute('aria-pressed') === 'true';
+  }
+
+  function selectedTypes() {
+    return chips.filter(isOn).map(function (chip) {
+      return chip.dataset.type;
+    });
+  }
+
   function apply() {
     var query = search.value.trim().toLocaleLowerCase('fr');
+    var types = selectedTypes();
+    all.setAttribute('aria-pressed', String(types.length === chips.length));
     var shown = 0;
     cards.forEach(function (card) {
-      var matches = (type.value === '' || card.dataset.type === type.value) && card.dataset.search.indexOf(query) !== -1;
+      var matches = types.indexOf(card.dataset.type) !== -1 && card.dataset.search.indexOf(query) !== -1;
       card.hidden = !matches;
       shown += matches ? 1 : 0;
     });
@@ -66,6 +79,19 @@
   }
 
   search.addEventListener('input', apply);
-  type.addEventListener('change', apply);
+  // Each chip switches one type; "all" selects every type, or none when all are selected.
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chip.setAttribute('aria-pressed', String(!isOn(chip)));
+      apply();
+    });
+  });
+  all.addEventListener('click', function () {
+    var next = String(!chips.every(isOn));
+    chips.forEach(function (chip) {
+      chip.setAttribute('aria-pressed', next);
+    });
+    apply();
+  });
   sort.addEventListener('change', order);
 })();

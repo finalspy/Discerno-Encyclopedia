@@ -194,7 +194,13 @@ ${related.length === 0 ? '' : `<h2>Voir aussi</h2>\n<ul>\n${related.join('\n')}\
 
 export function renderIndexPage(entries: readonly SiteEntry[], context: SiteContext): string {
   const present = TYPE_ORDER.filter((type) => entries.some((entry) => entry.front.type === type));
-  const options = present.map((type) => `<option value="${type}">${escapeHtml(TYPE_LABELS[type])}</option>`).join('');
+  // One toggle chip per type, in its color, with its count; several can be on at once (as in the application).
+  const chips = present
+    .map((type) => {
+      const count = entries.filter((entry) => entry.front.type === type).length;
+      return `<button type="button" class="type-chip" data-type="${type}" data-type-chip aria-pressed="true">${escapeHtml(TYPE_LABELS[type])} <span class="type-chip__count">${count}</span></button>`;
+    })
+    .join('');
   const items = [...entries]
     .sort((a, b) => a.front.title.localeCompare(b.front.title, 'fr'))
     .map(({ front }) => {
@@ -214,8 +220,8 @@ export function renderIndexPage(entries: readonly SiteEntry[], context: SiteCont
 </details>
 <div class="toolbar">
 <label>Rechercher <input type="search" data-filter-search></label>
-<label>Type <select data-filter-type><option value="">Tous</option>${options}</select></label>
 <label>Tri <select data-sort><option value="title">Titre</option><option value="type">Type</option></select></label>
+<div class="type-chips" role="group" aria-label="Types de fiches"><button type="button" class="type-chip type-chip--all" data-type-all aria-pressed="true">Tous les types</button>${chips}</div>
 </div>
 <p class="meta-text" aria-live="polite"><span data-count>${entries.length}</span> fiche(s)</p>
 <ul class="entry-list" data-entries>

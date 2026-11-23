@@ -101,6 +101,14 @@ describe('renderSite', () => {
     assert.deepEqual([...pages.keys()], ['index.html', 'mentions-legales.html', 'a.html']);
   });
 
+  it('filters the index with one chip per present type, all on at first', () => {
+    const html = renderSite([entry('a'), entry('b', { type: 'fallacy' })], CONTEXT).get('index.html') ?? '';
+    assert.match(html, /data-type-all aria-pressed="true"/);
+    assert.equal((html.match(/data-type-chip aria-pressed="true"/g) ?? []).length, 2);
+    assert.doesNotMatch(html, /data-type="concept" data-type-chip/);
+    assert.doesNotMatch(html, /<select data-filter-type/);
+  });
+
   it('marks an entry in review with a notice', () => {
     const pages = renderSite([entry('a')], CONTEXT);
     assert.match(pages.get('a.html') ?? '', /Fiche en cours de relecture/);
