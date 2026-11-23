@@ -85,13 +85,13 @@ export function readDonation(source: Readonly<Record<string, string | undefined>
 const HEART_SVG =
   '<svg class="support-link__heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 20.3l-1.3-1.2C6 14.9 3 12.2 3 8.8 3 6.1 5.1 4 7.8 4c1.5 0 3 .7 4.2 1.9C13.2 4.7 14.7 4 16.2 4 18.9 4 21 6.1 21 8.8c0 3.4-3 6.1-7.7 10.3z"/></svg>';
 
-/** The heart button to the donation page; a click counts as the Umami event donate-open, with its place. */
+/** The heart button to the donation page, opened in a new tab; a click counts as the Umami event donate-open, with its place. */
 function supportLink(donationUrl: string | null, place: 'header' | 'footer'): string {
   if (donationUrl === null) {
     return '';
   }
   const modifier = place === 'footer' ? ' support-link--small' : '';
-  return `<a class="support-link${modifier}" href="${escapeHtml(donationUrl)}" rel="noopener" data-umami-event="donate-open" data-umami-event-place="${place}">${HEART_SVG}<span class="support-link__label">Nous soutenir</span></a>`;
+  return `<a class="support-link${modifier}" href="${escapeHtml(donationUrl)}" target="_blank" rel="noopener noreferrer" data-umami-event="donate-open" data-umami-event-place="${place}">${HEART_SVG}<span class="support-link__label">Nous soutenir</span></a>`;
 }
 
 function analyticsScript(analytics: SiteAnalytics | null): string {

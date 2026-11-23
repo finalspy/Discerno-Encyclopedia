@@ -48,7 +48,7 @@ describe('donation button', () => {
     }
     const withDonation = renderSite(entries, { ...CONTEXT, donationUrl: 'https://en.tipeee.com/antimanip/' });
     for (const html of withDonation.values()) {
-      assert.match(html, /<a class="support-link" href="https:\/\/en\.tipeee\.com\/antimanip\/"[^>]*data-umami-event-place="header"/);
+      assert.match(html, /<a class="support-link" href="https:\/\/en\.tipeee\.com\/antimanip\/" target="_blank" rel="noopener noreferrer"[^>]*data-umami-event-place="header"/);
       assert.match(html, /<a class="support-link support-link--small" href="https:\/\/en\.tipeee\.com\/antimanip\/"[^>]*data-umami-event-place="footer"/);
     }
   });
