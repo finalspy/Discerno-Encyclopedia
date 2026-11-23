@@ -23,7 +23,8 @@
     "issues": "node scripts/validate-cli.ts entries --issues",
     "check": "tsc --noEmit && node scripts/validate-cli.ts entries",
     "test": "node --test \"scripts/*.test.ts\"",
-    "site:build": "node scripts/site-cli.ts entries dist/site"
+    "site:build": "node scripts/site-cli.ts entries dist/site",
+    "translations": "node scripts/translation-cli.ts"
   },
   "dependencies": {
     "ajv": "^8.17.1",

@@ -1,5 +1,5 @@
 import { readdirSync } from 'node:fs';
-import { listOpenIssues, validateDirectory } from './validate.ts';
+import { listOpenIssues, validateDirectory, validateTranslations } from './validate.ts';
 
 const args = process.argv.slice(2);
 const showIssues = args.includes('--issues');
@@ -9,7 +9,8 @@ if (directory === undefined) {
   process.exit(2);
 }
 
-const issues = validateDirectory(directory);
+const translations = validateTranslations(directory);
+const issues = [...validateDirectory(directory), ...translations.issues];
 const count = readdirSync(directory).filter((name) => name.endsWith('.md')).length;
 
 for (const issue of issues) {
@@ -21,6 +22,14 @@ if (issues.length > 0) {
   process.exit(1);
 }
 console.log(`${count} entry file(s) valid`);
+if (translations.counts.size > 0) {
+  const perLanguage = [...translations.counts].map(([lang, total]) => `${lang}: ${total}`).join(', ');
+  console.log(`translations: ${perLanguage}`);
+}
+// An outdated translation is not an error: it is shown with a notice until it is updated, and is listed here.
+for (const item of translations.outdated) {
+  console.warn(`WARNING: ${item.file}: outdated, its source changed since it was translated`);
+}
 
 const open = listOpenIssues(directory);
 if (open.length > 0) {

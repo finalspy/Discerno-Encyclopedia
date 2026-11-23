@@ -9,7 +9,8 @@ The rules every entry follows are in [CHARTER.md](CHARTER.md). To contribute, se
 ## Layout
 
 ```
-entries/                  one Markdown file per entry: entries/<slug>.md
+entries/                  one Markdown file per entry: entries/<slug>.md (French, the source language)
+entries/<lang>/           translations: entries/<lang>/<slug>.md
 schema/entry.schema.json  JSON Schema (draft 2020-12) of the front matter
 scripts/                  validator and static site builder (TypeScript, run natively by Node 24), with their tests
 site/                     style sheet and script of the static site
@@ -28,12 +29,36 @@ A YAML front matter block followed by Markdown. Required fields: `slug`, `type`,
 - The `slug` equals the file name and is a stable identifier: other entries and applications link to it. When an entry is renamed, the old slug moves to `aliases`; a slug is never reused.
 - `status` is `draft`, `in-review` or `published`. A published entry needs `last_reviewed` and at least one reference.
 - `type` is `bias`, `manipulation-technique`, `fallacy`, `rhetorical-device`, `indicator` (an observable sign) or `concept` (a definition with its debates). `themes` places the entry in one or more thematic sections.
-- Unless the entry is a draft, the body has the sections of its type, in the entry's language, as `## ` headings (the exact titles, English and French, are in `scripts/validate.ts`). Biases, techniques, fallacies and devices: how it works, why it is problematic, how to detect it, how to protect yourself. Indicators add how to respond. Concepts: definition, competing definitions and debates, why it helps to discern.
+- Unless the entry is a draft, the body has the sections of its type, in the entry's language, as `## ` headings (the exact titles of each language are in `scripts/languages.ts`). Biases, techniques, fallacies and devices: how it works, why it is problematic, how to detect it, how to protect yourself. Indicators add how to respond. Concepts: definition, competing definitions and debates, why it helps to discern.
 - An entry of the `authoritarian-drift` theme needs `reviewed_by` to be published (see [CHARTER.md](CHARTER.md)).
 - An entry of the `laws-and-adages` theme (laws, razors, principles and adages known by a name) says in its first section, in a paragraph starting with `Statut :` (`Status:` in English), what kind of statement it is: a mathematical result, an empirical regularity, a principle of method, or a humorous or satirical adage. A famous name is not evidence.
 - `open_issues` lists what is still to fix or to settle on an entry, whatever its `status`. Each item has a `kind` (`source-missing`, `unverified`, `link-missing`, `contested`, `neutrality`, `uncertain` or `other`), a short `note` and, optionally, the number of the tracker issue where the point is discussed (`issue`). A `published` entry has none: the validator rejects it. Keep notes short and factual; discussions belong in the issue.
 - References carry a stable outbound link when one exists: `doi` for articles and many books, otherwise `url`, limited to the hosts of `scripts/link-hosts.ts`. Wikipedia links come from `classifications.wikipedia`.
 - Sources are cited. Ideas and facts are reused, text is not, unless the source license allows it and `adapted_from` says so. Sources under a non-commercial license (CC BY-NC) are cited only.
+
+## Translations
+
+The entries are written in French. Each translation is its own file, `entries/<lang>/<slug>.md`, in one of the languages of `scripts/languages.ts` (English, Spanish, German, Italian, Portuguese, Dutch, Polish, Romanian, Russian, Ukrainian, Turkish, Arabic, Hindi, Indonesian, Japanese, Korean, simplified Chinese). Translations are written and reviewed like the entries, through commits and merge requests; no translation service is called by the build.
+
+A translation carries only what is written in a language: `slug`, `lang`, `title`, `synonyms`, `summary`, its own `status`, and `translated_from` (`lang` of the source, and `hash`, the fingerprint of the source text it translates). Type, themes, related entries, classifications and references come from the source entry. The body has the sections of the type with the titles of its language, and a `laws-and-adages` entry keeps its status paragraph.
+
+```yaml
+---
+slug: anchoring
+lang: en
+title: Anchoring
+summary: A first value, even an arbitrary one, steers the estimates that follow.
+status: in-review
+translated_from:
+  lang: fr
+  hash: "4656512ae20a0bac"
+---
+```
+
+- `pnpm run translations hash entries <slug>` prints the `hash` to write (in quotes: YAML would read some values as numbers).
+- `pnpm run translations missing entries <lang>` lists the entries without a translation in a language.
+- When the title, synonyms, summary or body of the source change, its translations become outdated: `pnpm run validate` lists them with a warning, and the sites show a notice until the translation and its `hash` are updated.
+- A translation is `in-review` until a reader of its language has reviewed it, and cannot be `published` before its source.
 
 ## Website
 

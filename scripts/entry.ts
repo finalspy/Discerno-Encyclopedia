@@ -2,6 +2,7 @@ import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormatsModule from 'ajv-formats';
 import { parse } from 'yaml';
 import schema from '../schema/entry.schema.json' with { type: 'json' };
+import type { Language } from './languages.ts';
 
 export type EntryType =
   | 'bias'
@@ -18,7 +19,7 @@ export type EntryTheme =
   | 'authoritarian-drift'
   | 'statistics-and-data'
   | 'laws-and-adages';
-export type EntryLang = 'en' | 'fr';
+export type EntryLang = Language;
 export type EntryStatus = 'draft' | 'in-review' | 'published';
 export type Taxonomy = 'disarm' | 'semeval2023' | 'semeval2020' | 'logic' | 'wikipedia';
 

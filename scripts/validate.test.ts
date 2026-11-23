@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
-import { listOpenIssues, validateDirectory } from './validate.ts';
+import { basename } from 'node:path';
+import { listOpenIssues, validateDirectory, validateTranslations } from './validate.ts';
 
 function fixture(name: string): string {
   return fileURLToPath(new URL(`../tests/fixtures/${name}`, import.meta.url));
@@ -72,3 +73,21 @@ for (const [name, expected] of rejected) {
     );
   });
 }
+
+test('checks translations against their source entry', () => {
+  const report = validateTranslations(fixture('translations'));
+  const messages = report.issues.map((issue) => `${basename(issue.file)}: ${issue.message}`).sort();
+  assert.deepEqual(messages, [
+    'framing.md: a translation cannot be published before its source',
+    'framing.md: missing section "## Comment le détecter"',
+    'framing.md: missing section "## Comment s\'en protéger"',
+    'framing.md: missing section "## Pourquoi c\'est problématique"',
+    'unknown.md: no source entry "unknown.md"',
+    'xx: "xx" is not a language of the encyclopedia (scripts/languages.ts)'
+  ]);
+  assert.deepEqual(
+    report.outdated.map((item) => item.slug),
+    ['framing']
+  );
+  assert.equal(report.counts.get('fr'), 3);
+});
