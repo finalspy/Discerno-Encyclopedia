@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import packageJson from '../package.json' with { type: 'json' };
 import { parseEntry } from './entry.ts';
 import { readLegalFacts } from './legal.ts';
-import { readAnalytics, renderSite, type SiteEntry } from './site.ts';
+import { readAnalytics, readDonation, renderSite, type SiteEntry } from './site.ts';
 
 const [entriesDirectory, outputDirectory] = process.argv.slice(2);
 if (entriesDirectory === undefined || outputDirectory === undefined) {
@@ -14,6 +14,12 @@ if (entriesDirectory === undefined || outputDirectory === undefined) {
 const analytics = readAnalytics(process.env);
 if (!analytics.ok) {
   console.error(analytics.error);
+  process.exit(1);
+}
+
+const donation = readDonation(process.env);
+if (!donation.ok) {
+  console.error(donation.error);
   process.exit(1);
 }
 
@@ -38,6 +44,7 @@ const pages = renderSite(entries, {
   buildDate: new Date().toISOString().slice(0, 10),
   repositoryUrl: packageJson.repository.url.replace(/\.git$/, ''),
   analytics: analytics.analytics,
+  donationUrl: donation.donationUrl,
   legal: legal.values
 });
 

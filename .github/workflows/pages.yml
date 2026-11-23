@@ -32,6 +32,8 @@ jobs:
           # Repository variables (Settings > Secrets and variables > Actions > Variables). Both unset: no tracker.
           PUBLIC_UMAMI_SRC: ${{ vars.PUBLIC_UMAMI_SRC }}
           PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.PUBLIC_UMAMI_WEBSITE_ID }}
+          # Donation page (repository variable, https URL): a heart button in the header and the footer. Unset: no button.
+          PUBLIC_DONATION_URL: ${{ vars.PUBLIC_DONATION_URL }}
           # Legal notice facts (repository variables): a missing one shows a marker on the page and a build warning.
           LEGAL_CONTACT_EMAIL: ${{ vars.LEGAL_CONTACT_EMAIL }}
           LEGAL_PUBLISHER_NAME: ${{ vars.LEGAL_PUBLISHER_NAME }}

@@ -35,6 +35,8 @@ export interface SiteContext {
   repositoryUrl: string;
   /** null: no tracker on the pages. */
   analytics: SiteAnalytics | null;
+  /** Donation page, shown as a heart button in the header and the footer; null: no button. */
+  donationUrl: string | null;
   /** Facts of the legal notice, or their "not configured" markers (scripts/legal.ts). */
   legal: Readonly<Record<LegalVariable, string>>;
 }
@@ -61,6 +63,35 @@ export function readAnalytics(source: Readonly<Record<string, string | undefined
     return { ok: false, error: 'PUBLIC_UMAMI_SRC must be an https URL' };
   }
   return { ok: true, analytics: { src, websiteId } };
+}
+
+export type DonationSettings = { ok: true; donationUrl: string | null } | { ok: false; error: string };
+
+/**
+ * Reads the donation page from the environment: PUBLIC_DONATION_URL (https URL). Unset: no donation button. An invalid
+ * URL is an error, so that a broken configuration fails the build instead of silently dropping the button.
+ */
+export function readDonation(source: Readonly<Record<string, string | undefined>>): DonationSettings {
+  const url = source.PUBLIC_DONATION_URL ?? '';
+  if (url === '') {
+    return { ok: true, donationUrl: null };
+  }
+  if (!/^https:\/\/[^\s"<>]+$/.test(url)) {
+    return { ok: false, error: 'PUBLIC_DONATION_URL must be an https URL' };
+  }
+  return { ok: true, donationUrl: url };
+}
+
+const HEART_SVG =
+  '<svg class="support-link__heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 20.3l-1.3-1.2C6 14.9 3 12.2 3 8.8 3 6.1 5.1 4 7.8 4c1.5 0 3 .7 4.2 1.9C13.2 4.7 14.7 4 16.2 4 18.9 4 21 6.1 21 8.8c0 3.4-3 6.1-7.7 10.3z"/></svg>';
+
+/** The heart button to the donation page; a click counts as the Umami event donate-open, with its place. */
+function supportLink(donationUrl: string | null, place: 'header' | 'footer'): string {
+  if (donationUrl === null) {
+    return '';
+  }
+  const modifier = place === 'footer' ? ' support-link--small' : '';
+  return `<a class="support-link${modifier}" href="${escapeHtml(donationUrl)}" rel="noopener" data-umami-event="donate-open" data-umami-event-place="${place}">${HEART_SVG}<span class="support-link__label">Nous soutenir</span></a>`;
 }
 
 function analyticsScript(analytics: SiteAnalytics | null): string {
@@ -137,7 +168,9 @@ ${analyticsScript(context.analytics)}</head>
 <header class="site-header">
 <div class="site-header__inner">
 <a class="brand" href="${assetPrefix}index.html"><img class="brand__logo" src="${assetPrefix}brand/logo-on-dark.svg" alt="" width="62" height="46"><span class="brand__name">Antimanip</span><span class="brand__tag">Encyclopédie</span></a>
-<button class="theme-toggle" type="button" data-theme-toggle aria-label="Changer de thème">Thème</button>
+<div class="site-header__tools">
+${supportLink(context.donationUrl, 'header')}<button class="theme-toggle" type="button" data-theme-toggle aria-label="Changer de thème">Thème</button>
+</div>
 </div>
 </header>
 <main class="site-main">
@@ -146,6 +179,7 @@ ${content}
 <footer class="site-footer">
 <div class="site-footer__inner">
 <p>Version ${escapeHtml(context.version)}, ${escapeHtml(context.buildDate)} · ©@finalspy · Contenu sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a> · <a href="${escapeHtml(context.repositoryUrl)}">Source et contributions</a> · <a href="${escapeHtml(discussionsUrl(context.repositoryUrl))}">Discussions</a> · <a href="${assetPrefix}mentions-legales.html">Mentions légales</a></p>
+${supportLink(context.donationUrl, 'footer')}
 </div>
 </footer>
 </body>

@@ -23,6 +23,9 @@
   --color-notice-text: #5c4100;
   --color-notice-border: #df9a21;
   --color-focus: #df9a21;
+  /* Heart of the donation button: on the page background, and on the blue header band. */
+  --color-support: #c0365a;
+  --color-support-on-dark: #f58aa6;
 
   --type-concept: #5b4bb5;
   --type-bias: #0b5fa5;
@@ -58,6 +61,8 @@
   --color-notice-text: #f6d58c;
   --color-notice-border: #f2b43e;
   --color-focus: #f2b43e;
+  --color-support: #f58aa6;
+  --color-support-on-dark: #f58aa6;
 
   --type-concept: #a99bf0;
   --type-bias: #5aa9e6;
@@ -120,11 +125,13 @@ a:hover {
   padding: var(--space);
 }
 
+/* On a phone the tools wrap under the brand, aligned to the end, instead of widening the page. */
 .site-header__inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space);
+  gap: 0.5rem var(--space);
 }
 
 .brand {
@@ -180,6 +187,78 @@ select {
   background: transparent;
   color: var(--color-header-text);
   cursor: pointer;
+}
+
+.site-header__tools {
+  display: flex;
+  margin-inline-start: auto;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* The donation link, styled as a button with a heart. */
+.support-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0.25rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.support-link:hover {
+  border-color: var(--color-support);
+}
+
+.support-link__heart {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  color: var(--color-support);
+}
+
+.site-header .support-link {
+  border-color: color-mix(in srgb, var(--color-header-text) 45%, transparent);
+  background: transparent;
+  color: var(--color-header-text);
+}
+
+.site-header .support-link__heart {
+  color: var(--color-support-on-dark);
+}
+
+.site-header .support-link:hover {
+  border-color: var(--color-support-on-dark);
+}
+
+/* Heart only on a phone, in the header: the label stays readable by screen readers. */
+@media (max-width: 640px) {
+  .site-header .support-link__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+.support-link--small {
+  min-height: 0;
+  gap: 0.35rem;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+.support-link--small .support-link__heart {
+  width: 0.85rem;
+  height: 0.85rem;
 }
 
 .site-header .theme-toggle:hover {
@@ -425,6 +504,11 @@ h1::after {
 }
 
 .site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
   padding-block: 0.375rem;
 }
 

@@ -69,6 +69,8 @@ In the repository settings, Pages must use "GitHub Actions" as its source.
 
 Visits are counted with Umami, without cookies and with Do Not Track respected, when the repository variables `PUBLIC_UMAMI_SRC` (https URL of the tracker script) and `PUBLIC_UMAMI_WEBSITE_ID` are set (Settings > Secrets and variables > Actions > Variables). Neither set: no tracker. Only one set: the build fails.
 
+A "Nous soutenir" button with a heart, in the header and the footer of every page, links to the donation page given by the repository variable `PUBLIC_DONATION_URL` (https URL, e.g. `https://en.tipeee.com/antimanip/`). Unset: no button. Not an https URL: the build fails. A click counts as the Umami event `donate-open`, with its place (`header` or `footer`).
+
 The legal notice page (`mentions-legales.html`) takes its facts from the repository variables `LEGAL_CONTACT_EMAIL`, `LEGAL_PUBLISHER_NAME`, `LEGAL_PUBLISHER_FORM`, `LEGAL_PUBLISHER_CAPITAL`, `LEGAL_PUBLISHER_REGISTRATION`, `LEGAL_PUBLISHER_VAT`, `LEGAL_PUBLISHER_ADDRESS`, `LEGAL_PUBLICATION_DIRECTOR`, `LEGAL_HOST_NAME`, `LEGAL_HOST_ADDRESS` and `LEGAL_HOST_PHONE`; none is written in the code. A missing one shows a `[NON CONFIGURÉ : NAME]` marker on the page and a warning in the build log, and never fails the build. The host is the one of the website (GitHub Pages).
 
 Readers discuss the entries in the GitHub Discussions of this repository (Discussions must be enabled in its settings): one space for the whole encyclopedia. Every page links to it in its footer, and each entry page ends with a "Discuter de cette fiche" link that searches the discussions for the entry's slug. A discussion about an entry should name its slug in its title or body.

@@ -2,9 +2,9 @@ import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import type { EntryFrontMatter } from './entry.ts';
 import { readLegalFacts } from './legal.ts';
-import { isVisibleOnSite, readAnalytics, renderSite, type SiteEntry } from './site.ts';
+import { isVisibleOnSite, readAnalytics, readDonation, renderSite, type SiteEntry } from './site.ts';
 
-const CONTEXT = { version: '1.0.0', buildDate: '2026-11-05', repositoryUrl: 'https://example.org/repo', analytics: null, legal: readLegalFacts({}).values };
+const CONTEXT = { version: '1.0.0', buildDate: '2026-11-05', repositoryUrl: 'https://example.org/repo', analytics: null, donationUrl: null, legal: readLegalFacts({}).values };
 
 function front(slug: string, extra: Partial<EntryFrontMatter> = {}): EntryFrontMatter {
   return { slug, type: 'bias', lang: 'fr', title: `Titre ${slug}`, summary: 'Résumé.', status: 'in-review', ...extra };
@@ -27,6 +27,30 @@ describe('isVisibleOnSite', () => {
 
   it('never shows drafts', () => {
     assert.equal(isVisibleOnSite(front('a', { status: 'draft' })), false);
+  });
+});
+
+describe('donation button', () => {
+  it('reads an https donation URL, none when unset, and rejects another scheme', () => {
+    assert.deepEqual(readDonation({}), { ok: true, donationUrl: null });
+    assert.deepEqual(readDonation({ PUBLIC_DONATION_URL: '' }), { ok: true, donationUrl: null });
+    assert.deepEqual(readDonation({ PUBLIC_DONATION_URL: 'https://en.tipeee.com/antimanip/' }), {
+      ok: true,
+      donationUrl: 'https://en.tipeee.com/antimanip/'
+    });
+    assert.equal(readDonation({ PUBLIC_DONATION_URL: 'http://en.tipeee.com/antimanip/' }).ok, false);
+  });
+
+  it('shows the heart button in the header and the footer of every page only when configured', () => {
+    const entries: SiteEntry[] = [{ front: front('a'), body: 'Texte.' }];
+    for (const html of renderSite(entries, CONTEXT).values()) {
+      assert.doesNotMatch(html, /support-link/);
+    }
+    const withDonation = renderSite(entries, { ...CONTEXT, donationUrl: 'https://en.tipeee.com/antimanip/' });
+    for (const html of withDonation.values()) {
+      assert.match(html, /<a class="support-link" href="https:\/\/en\.tipeee\.com\/antimanip\/"[^>]*data-umami-event-place="header"/);
+      assert.match(html, /<a class="support-link support-link--small" href="https:\/\/en\.tipeee\.com\/antimanip\/"[^>]*data-umami-event-place="footer"/);
+    }
   });
 });
 
