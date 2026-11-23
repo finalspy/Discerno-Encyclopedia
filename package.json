@@ -15,6 +15,7 @@
   },
   "exports": {
     "./entry": "./scripts/entry.ts",
+    "./translation": "./scripts/translation.ts",
     "./schema/entry.schema.json": "./schema/entry.schema.json",
     "./entries/*": "./entries/*"
   },
