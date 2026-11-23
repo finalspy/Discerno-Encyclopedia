@@ -102,6 +102,18 @@ export function isVisibleOnSite(front: EntryFrontMatter): boolean {
   return !(front.themes ?? []).some((theme) => REVIEW_REQUIRED_THEMES.includes(theme));
 }
 
+/** GitHub Discussions of the repository: one space for the whole encyclopedia, not one thread per entry. */
+export function discussionsUrl(repositoryUrl: string): string {
+  return `${repositoryUrl}/discussions`;
+}
+
+/** The discussions that mention an entry: a search on its slug (GitHub has no thread per page). */
+export function entryDiscussionsUrl(repositoryUrl: string, slug: string): string {
+  const url = new URL(discussionsUrl(repositoryUrl));
+  url.searchParams.set('discussions_q', slug);
+  return url.toString();
+}
+
 function statusLabel(front: EntryFrontMatter): string {
   return front.status === 'published' ? 'Relue' : 'En relecture';
 }
@@ -133,7 +145,7 @@ ${content}
 </main>
 <footer class="site-footer">
 <div class="site-footer__inner">
-<p>Version ${escapeHtml(context.version)}, ${escapeHtml(context.buildDate)} · ©@finalspy · Contenu sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a> · <a href="${escapeHtml(context.repositoryUrl)}">Source et contributions</a> · <a href="${assetPrefix}mentions-legales.html">Mentions légales</a></p>
+<p>Version ${escapeHtml(context.version)}, ${escapeHtml(context.buildDate)} · ©@finalspy · Contenu sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a> · <a href="${escapeHtml(context.repositoryUrl)}">Source et contributions</a> · <a href="${escapeHtml(discussionsUrl(context.repositoryUrl))}">Discussions</a> · <a href="${assetPrefix}mentions-legales.html">Mentions légales</a></p>
 </div>
 </footer>
 </body>
@@ -175,6 +187,7 @@ ${markdown.parse(body, { async: false })}
 ${references.length === 0 ? '' : `<h2>Références</h2>\n<ul>\n${references.join('\n')}\n</ul>`}
 ${pointers.length === 0 ? '' : `<h2>Pour aller plus loin</h2>\n<ul>\n${pointers.join('\n')}\n</ul>`}
 ${related.length === 0 ? '' : `<h2>Voir aussi</h2>\n<ul>\n${related.join('\n')}\n</ul>`}
+<p class="discuss"><a href="${escapeHtml(entryDiscussionsUrl(context.repositoryUrl, front.slug))}">Discuter de cette fiche</a> : une question, une erreur, une source à ajouter.</p>
 </article>`;
   return page(`${front.title} · Encyclopédie Antimanip`, front.summary, '', content, context);
 }

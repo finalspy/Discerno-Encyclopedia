@@ -119,6 +119,14 @@ describe('renderSite', () => {
     assert.match(html, /<a href="https:\/\/example\.org">ok<\/a>/);
   });
 
+  it('links every page to the discussions, and each entry to the discussions that mention it', () => {
+    const pages = renderSite([entry('a')], CONTEXT);
+    for (const html of pages.values()) {
+      assert.match(html, /<a href="https:\/\/example\.org\/repo\/discussions">Discussions<\/a>/);
+    }
+    assert.match(pages.get('a.html') ?? '', /<a href="https:\/\/example\.org\/repo\/discussions\?discussions_q=a">Discuter de cette fiche<\/a>/);
+  });
+
   it('links a reference through its DOI', () => {
     const pages = renderSite([entry('a', { references: [{ title: 'Un titre', author: 'A', year: 2000, doi: '10.1000/x' }] })], CONTEXT);
     assert.match(pages.get('a.html') ?? '', /https:\/\/doi\.org\/10\.1000\/x/);
