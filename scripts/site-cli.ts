@@ -2,6 +2,7 @@ import { copyFileSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSy
 import { join } from 'node:path';
 import packageJson from '../package.json' with { type: 'json' };
 import { parseEntry } from './entry.ts';
+import { readLegalFacts } from './legal.ts';
 import { readAnalytics, renderSite, type SiteEntry } from './site.ts';
 
 const [entriesDirectory, outputDirectory] = process.argv.slice(2);
@@ -14,6 +15,12 @@ const analytics = readAnalytics(process.env);
 if (!analytics.ok) {
   console.error(analytics.error);
   process.exit(1);
+}
+
+// A missing legal fact never fails the build: the page shows its marker, and the log lists it.
+const legal = readLegalFacts(process.env);
+if (legal.missing.length > 0) {
+  console.warn(`WARNING: legal notice incomplete, missing: ${legal.missing.join(' ')}`);
 }
 
 const entries: SiteEntry[] = readdirSync(entriesDirectory)
@@ -30,7 +37,8 @@ const pages = renderSite(entries, {
   version: packageJson.version,
   buildDate: new Date().toISOString().slice(0, 10),
   repositoryUrl: packageJson.repository.url.replace(/\.git$/, ''),
-  analytics: analytics.analytics
+  analytics: analytics.analytics,
+  legal: legal.values
 });
 
 rmSync(outputDirectory, { recursive: true, force: true });
@@ -41,9 +49,13 @@ for (const [name, html] of pages) {
 for (const asset of ['site.css', 'site.js']) {
   copyFileSync(join('site', asset), join(outputDirectory, asset));
 }
+mkdirSync(join(outputDirectory, 'brand'));
+for (const asset of readdirSync(join('site', 'brand'))) {
+  copyFileSync(join('site', 'brand', asset), join(outputDirectory, 'brand', asset));
+}
 // The pages are plain HTML: this file tells GitHub Pages not to process them with Jekyll.
 writeFileSync(join(outputDirectory, '.nojekyll'), '');
 
 console.log(
-  `${pages.size - 1} of ${entries.length} entries written to ${outputDirectory}, ${analytics.analytics === null ? 'without' : 'with'} Umami`
+  `${pages.size - 2} of ${entries.length} entries written to ${outputDirectory}, ${analytics.analytics === null ? 'without' : 'with'} Umami`
 );

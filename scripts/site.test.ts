@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import type { EntryFrontMatter } from './entry.ts';
+import { readLegalFacts } from './legal.ts';
 import { isVisibleOnSite, readAnalytics, renderSite, type SiteEntry } from './site.ts';
 
-const CONTEXT = { version: '1.0.0', buildDate: '2026-11-05', repositoryUrl: 'https://example.org/repo', analytics: null };
+const CONTEXT = { version: '1.0.0', buildDate: '2026-11-05', repositoryUrl: 'https://example.org/repo', analytics: null, legal: readLegalFacts({}).values };
 
 function front(slug: string, extra: Partial<EntryFrontMatter> = {}): EntryFrontMatter {
   return { slug, type: 'bias', lang: 'fr', title: `Titre ${slug}`, summary: 'Résumé.', status: 'in-review', ...extra };
@@ -49,6 +50,37 @@ describe('readAnalytics', () => {
   });
 });
 
+describe('readLegalFacts', () => {
+  it('keeps the configured values and marks the missing ones', () => {
+    const facts = readLegalFacts({ LEGAL_PUBLISHER_NAME: ' Éditeur SAS ', LEGAL_HOST_NAME: '' });
+    assert.equal(facts.values.LEGAL_PUBLISHER_NAME, 'Éditeur SAS');
+    assert.equal(facts.values.LEGAL_HOST_NAME, '[NON CONFIGURÉ : LEGAL_HOST_NAME]');
+    assert.equal(facts.missing.includes('LEGAL_HOST_NAME'), true);
+    assert.equal(facts.missing.includes('LEGAL_PUBLISHER_NAME'), false);
+  });
+});
+
+describe('legal notice page', () => {
+  it('shows the facts, escaped, and the markers of the missing ones', () => {
+    const legal = readLegalFacts({ LEGAL_PUBLISHER_NAME: 'A & B <SAS>' }).values;
+    const html = renderSite([], { ...CONTEXT, legal }).get('mentions-legales.html') ?? '';
+    assert.match(html, /A &amp; B &lt;SAS&gt;/);
+    assert.match(html, /\[NON CONFIGURÉ : LEGAL_HOST_NAME\]/);
+  });
+
+  it('describes the audience measurement only when it is enabled', () => {
+    assert.doesNotMatch(renderSite([], CONTEXT).get('mentions-legales.html') ?? '', /Umami/);
+    const analytics = { src: 'https://stats.example.org/script.js', websiteId: 'id-1' };
+    assert.match(renderSite([], { ...CONTEXT, analytics }).get('mentions-legales.html') ?? '', /mesurée avec Umami/);
+  });
+
+  it('is linked from the footer of every page', () => {
+    for (const html of renderSite([entry('a')], CONTEXT).values()) {
+      assert.match(html, /<a href="mentions-legales\.html">Mentions légales<\/a>/);
+    }
+  });
+});
+
 describe('renderSite', () => {
   it('adds the Umami script to every page when it is configured', () => {
     const analytics = { src: 'https://stats.example.org/script.js', websiteId: 'id-1' };
@@ -66,7 +98,7 @@ describe('renderSite', () => {
 
   it('writes an index and one page per visible entry', () => {
     const pages = renderSite([entry('a'), entry('b', { status: 'draft' })], CONTEXT);
-    assert.deepEqual([...pages.keys()], ['index.html', 'a.html']);
+    assert.deepEqual([...pages.keys()], ['index.html', 'mentions-legales.html', 'a.html']);
   });
 
   it('marks an entry in review with a notice', () => {

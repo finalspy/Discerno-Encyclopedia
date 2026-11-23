@@ -1,5 +1,6 @@
 import { Marked } from 'marked';
 import type { EntryFrontMatter, EntryTheme, EntryType, Reference } from './entry.ts';
+import type { LegalVariable } from './legal.ts';
 
 /** Themes whose entries stay hidden until they are published (see CHARTER.md, article 14). */
 export const REVIEW_REQUIRED_THEMES: readonly EntryTheme[] = ['authoritarian-drift', 'obscurantism-and-pseudoscience'];
@@ -34,6 +35,8 @@ export interface SiteContext {
   repositoryUrl: string;
   /** null: no tracker on the pages. */
   analytics: SiteAnalytics | null;
+  /** Facts of the legal notice, or their "not configured" markers (scripts/legal.ts). */
+  legal: Readonly<Record<LegalVariable, string>>;
 }
 
 export type AnalyticsSettings =
@@ -123,7 +126,7 @@ ${analyticsScript(context.analytics)}</head>
 ${content}
 </main>
 <footer class="site-footer">
-<p>Version ${escapeHtml(context.version)}, ${escapeHtml(context.buildDate)} · ©@finalspy · Contenu sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a> · <a href="${escapeHtml(context.repositoryUrl)}">Source et contributions</a></p>
+<p>Version ${escapeHtml(context.version)}, ${escapeHtml(context.buildDate)} · ©@finalspy · Contenu sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a> · <a href="${escapeHtml(context.repositoryUrl)}">Source et contributions</a> · <a href="${assetPrefix}mentions-legales.html">Mentions légales</a></p>
 </footer>
 </body>
 </html>
@@ -200,11 +203,57 @@ ${items}
   return page('Encyclopédie Antimanip', 'Biais cognitifs et techniques de manipulation : comprendre, détecter, se protéger.', '', content, context);
 }
 
+/** Legal notice (French law n° 2004-575 of 21 June 2004). Every fact comes from the build environment. */
+export function renderLegalPage(context: SiteContext): string {
+  const legal = Object.fromEntries(Object.entries(context.legal).map(([name, value]) => [name, escapeHtml(value)])) as Record<
+    LegalVariable,
+    string
+  >;
+  const analytics =
+    context.analytics === null
+      ? ''
+      : "\n<p>La fréquentation est mesurée avec Umami, hébergé par l'éditeur, sans cookie, sans suivi d'un site à l'autre et en respectant le réglage « Ne pas me pister » du navigateur.</p>";
+  const content = `<article class="legal">
+<h1>Mentions légales</h1>
+<p class="lead">Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique.</p>
+<h2>Éditeur</h2>
+<p>L'Encyclopédie Antimanip est éditée par ${legal.LEGAL_PUBLISHER_NAME}, ${legal.LEGAL_PUBLISHER_FORM}.</p>
+<ul>
+<li>Capital social : ${legal.LEGAL_PUBLISHER_CAPITAL}</li>
+<li>Immatriculation : ${legal.LEGAL_PUBLISHER_REGISTRATION}</li>
+<li>Numéro de TVA : ${legal.LEGAL_PUBLISHER_VAT}</li>
+<li>Siège social : ${legal.LEGAL_PUBLISHER_ADDRESS}</li>
+<li>Contact : ${legal.LEGAL_CONTACT_EMAIL}</li>
+</ul>
+<h2>Directeur de la publication</h2>
+<p>${legal.LEGAL_PUBLICATION_DIRECTOR}, en sa qualité de représentant légal de l'éditeur.</p>
+<h2>Hébergement</h2>
+<ul>
+<li>Société : ${legal.LEGAL_HOST_NAME}</li>
+<li>Adresse : ${legal.LEGAL_HOST_ADDRESS}</li>
+<li>Téléphone : ${legal.LEGAL_HOST_PHONE}</li>
+</ul>
+<h2>Propriété intellectuelle</h2>
+<p>Les fiches sont publiées sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a> et le code du site sous licence AGPL-3.0. Le nom Antimanip et le logo restent la propriété de l'éditeur.</p>
+<h2>Données personnelles</h2>
+<p>Le site ne demande aucun compte et ne dépose aucun cookie. Le thème choisi est gardé dans votre navigateur et n'est jamais envoyé.</p>${analytics}
+<p>L'hébergeur peut enregistrer l'adresse IP des visiteurs dans ses journaux techniques, selon sa propre politique de confidentialité. Les discussions et les contributions passent par le dépôt public du projet et sont soumises aux conditions de cette plateforme.</p>
+<h2>Signaler un contenu</h2>
+<p>Pour signaler une erreur, un contenu illicite ou une atteinte à vos droits, écrivez à ${legal.LEGAL_CONTACT_EMAIL} en indiquant la page concernée et vos raisons.</p>
+<h2>Droit applicable</h2>
+<p>Les présentes mentions sont régies par le droit français.</p>
+</article>`;
+  return page('Mentions légales · Encyclopédie Antimanip', "Éditeur, hébergeur et informations légales de l'Encyclopédie Antimanip.", '', content, context);
+}
+
 /** Renders the whole site as a map from file name to HTML. Slugs are restricted by the schema, so they are safe file names. */
 export function renderSite(entries: readonly SiteEntry[], context: SiteContext): Map<string, string> {
   const visibleEntries = entries.filter(({ front }) => isVisibleOnSite(front));
   const visible = new Map(visibleEntries.map((entry) => [entry.front.slug, entry]));
-  const pages = new Map<string, string>([['index.html', renderIndexPage(visibleEntries, context)]]);
+  const pages = new Map<string, string>([
+    ['index.html', renderIndexPage(visibleEntries, context)],
+    ['mentions-legales.html', renderLegalPage(context)]
+  ]);
   for (const entry of visibleEntries) {
     pages.set(`${entry.front.slug}.html`, renderEntryPage(entry, visible, context));
   }

@@ -32,6 +32,18 @@ jobs:
           # Repository variables (Settings > Secrets and variables > Actions > Variables). Both unset: no tracker.
           PUBLIC_UMAMI_SRC: ${{ vars.PUBLIC_UMAMI_SRC }}
           PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.PUBLIC_UMAMI_WEBSITE_ID }}
+          # Legal notice facts (repository variables): a missing one shows a marker on the page and a build warning.
+          LEGAL_CONTACT_EMAIL: ${{ vars.LEGAL_CONTACT_EMAIL }}
+          LEGAL_PUBLISHER_NAME: ${{ vars.LEGAL_PUBLISHER_NAME }}
+          LEGAL_PUBLISHER_FORM: ${{ vars.LEGAL_PUBLISHER_FORM }}
+          LEGAL_PUBLISHER_CAPITAL: ${{ vars.LEGAL_PUBLISHER_CAPITAL }}
+          LEGAL_PUBLISHER_REGISTRATION: ${{ vars.LEGAL_PUBLISHER_REGISTRATION }}
+          LEGAL_PUBLISHER_VAT: ${{ vars.LEGAL_PUBLISHER_VAT }}
+          LEGAL_PUBLISHER_ADDRESS: ${{ vars.LEGAL_PUBLISHER_ADDRESS }}
+          LEGAL_PUBLICATION_DIRECTOR: ${{ vars.LEGAL_PUBLICATION_DIRECTOR }}
+          LEGAL_HOST_NAME: ${{ vars.LEGAL_HOST_NAME }}
+          LEGAL_HOST_ADDRESS: ${{ vars.LEGAL_HOST_ADDRESS }}
+          LEGAL_HOST_PHONE: ${{ vars.LEGAL_HOST_PHONE }}
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist/site
