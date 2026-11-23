@@ -1,26 +1,70 @@
+/* Palette of the Antimanip logo: gold (light, above), blue (shadow, below), teal (iris). The type colors are the
+   ones of the application, one per entry type. Text colors keep a contrast of at least 4.5:1 on their background. */
 :root {
-  --color-bg: #fbfaf7;
+  color-scheme: light;
+  --brand-gold: #df9a21;
+  --brand-blue: #033e66;
+  --brand-teal: #0f8f8a;
+  --brand-gradient: linear-gradient(90deg, var(--brand-gold), var(--brand-teal) 55%, var(--brand-blue));
+
+  --color-bg: #f7f5ef;
   --color-surface: #ffffff;
-  --color-text: #1e2329;
-  --color-muted: #5a6470;
-  --color-border: #d9dde2;
-  --color-accent: #1f5f8b;
-  --color-notice-bg: #fff6df;
-  --color-notice-text: #5c4400;
+  --color-text: #13263a;
+  --color-muted: #4e5c6b;
+  --color-border: #ddd6c6;
+  --color-link: #0a6763;
+  --color-heading: #033e66;
+  --color-header-bg: #033e66;
+  --color-header-text: #ffffff;
+  --color-header-tag: #f2b43e;
+  --color-badge-bg: #e2f1ef;
+  --color-badge-text: #0a5753;
+  --color-notice-bg: #fcf0d6;
+  --color-notice-text: #5c4100;
+  --color-notice-border: #df9a21;
+  --color-focus: #df9a21;
+
+  --type-concept: #5b4bb5;
+  --type-bias: #0b5fa5;
+  --type-manipulation-technique: #b84a00;
+  --type-fallacy: #a8397a;
+  --type-rhetorical-device: #00785a;
+  --type-indicator: #8a6100;
+
   --space: 1rem;
-  --radius: 8px;
-  --width: 46rem;
+  --radius: 10px;
+  --width: 48rem;
 }
 
 :root[data-theme='dark'] {
-  --color-bg: #15191e;
-  --color-surface: #1e242b;
-  --color-text: #e8ebee;
-  --color-muted: #a5afba;
-  --color-border: #39424c;
-  --color-accent: #7cc0ed;
-  --color-notice-bg: #3a3014;
-  --color-notice-text: #f3e1ac;
+  color-scheme: dark;
+  --brand-gold: #f2b43e;
+  --brand-blue: #5aa9de;
+  --brand-teal: #2fc4bb;
+
+  --color-bg: #0b1626;
+  --color-surface: #12223a;
+  --color-text: #e6edf5;
+  --color-muted: #a3b3c5;
+  --color-border: #24395a;
+  --color-link: #4fd3ca;
+  --color-heading: #f2b43e;
+  --color-header-bg: #06101d;
+  --color-header-text: #e6edf5;
+  --color-header-tag: #f2b43e;
+  --color-badge-bg: #10363c;
+  --color-badge-text: #8ce6df;
+  --color-notice-bg: #33270b;
+  --color-notice-text: #f6d58c;
+  --color-notice-border: #f2b43e;
+  --color-focus: #f2b43e;
+
+  --type-concept: #a99bf0;
+  --type-bias: #5aa9e6;
+  --type-manipulation-technique: #f08a4b;
+  --type-fallacy: #e58fc0;
+  --type-rhetorical-device: #3ecf9f;
+  --type-indicator: #e0b02f;
 }
 
 * {
@@ -36,27 +80,76 @@ body {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-link);
+  text-underline-offset: 0.15em;
 }
 
-.site-header,
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Header: a blue band, as the lower half of the logo, closed by the brand gradient. */
+.site-header {
+  background: var(--color-header-bg);
+  color: var(--color-header-text);
+  border-bottom: 4px solid transparent;
+  border-image: var(--brand-gradient) 1;
+}
+
+.site-header__inner,
 .site-main,
-.site-footer {
+.site-footer__inner {
   max-width: var(--width);
   margin: 0 auto;
   padding: var(--space);
 }
 
-.site-header {
+.site-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space);
 }
 
-.site-header__brand {
-  font-weight: 700;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-header-text);
   text-decoration: none;
+}
+
+.brand__logo {
+  display: block;
+  width: 62px;
+  height: 46px;
+}
+
+@media (max-width: 400px) {
+  .brand__logo {
+    width: 48px;
+    height: 36px;
+  }
+
+  .brand__tag {
+    font-size: 0.875rem;
+  }
+}
+
+.brand__name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.brand__tag {
+  color: var(--color-header-tag);
+  font-weight: 500;
 }
 
 .theme-toggle,
@@ -71,13 +164,42 @@ select {
   font: inherit;
 }
 
-.theme-toggle {
+.site-header .theme-toggle {
+  border-color: color-mix(in srgb, var(--color-header-text) 45%, transparent);
+  background: transparent;
+  color: var(--color-header-text);
   cursor: pointer;
 }
 
-h1 {
+.site-header .theme-toggle:hover {
+  border-color: var(--color-header-tag);
+}
+
+input:focus,
+select:focus {
+  border-color: var(--brand-teal);
+}
+
+h1,
+h2 {
+  color: var(--color-heading);
   line-height: 1.2;
   overflow-wrap: anywhere;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* The page title is underlined with the brand gradient. */
+h1::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 4px;
+  margin-top: 0.6rem;
+  border-radius: 2px;
+  background: var(--brand-gradient);
 }
 
 .lead,
@@ -91,25 +213,35 @@ h1 {
   color: var(--color-muted);
 }
 
+.legend summary {
+  cursor: pointer;
+  color: var(--color-link);
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space);
+  padding: var(--space);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
 }
 
 .toolbar label {
   display: grid;
   gap: 0.25rem;
   flex: 1 1 10rem;
+  font-weight: 600;
 }
 
 .toolbar input,
 .toolbar select {
   width: 100%;
+  font-weight: 400;
 }
 
-.meta-text,
-.site-footer {
+.meta-text {
   color: var(--color-muted);
   font-size: 0.875rem;
 }
@@ -122,41 +254,100 @@ h1 {
   list-style: none;
 }
 
+/* Each card is marked with the color of its entry type. */
 .entry-card {
+  --type-color: var(--brand-teal);
   padding: var(--space);
   border: 1px solid var(--color-border);
+  border-left: 5px solid var(--type-color);
   border-radius: var(--radius);
   background: var(--color-surface);
+  transition:
+    border-color 0.15s,
+    transform 0.15s;
+}
+
+.entry-card:hover {
+  border-color: var(--brand-gold);
+  border-left-color: var(--type-color);
+  transform: translateY(-1px);
 }
 
 .entry-card[hidden] {
   display: none;
 }
 
+.entry-card > a {
+  color: var(--color-heading);
+  text-decoration: none;
+}
+
+.entry-card > a:hover {
+  text-decoration: underline;
+}
+
 .entry-card p {
   margin: 0.5rem 0 0;
 }
 
+[data-type='concept'] {
+  --type-color: var(--type-concept);
+}
+[data-type='bias'] {
+  --type-color: var(--type-bias);
+}
+[data-type='manipulation-technique'] {
+  --type-color: var(--type-manipulation-technique);
+}
+[data-type='fallacy'] {
+  --type-color: var(--type-fallacy);
+}
+[data-type='rhetorical-device'] {
+  --type-color: var(--type-rhetorical-device);
+}
+[data-type='indicator'] {
+  --type-color: var(--type-indicator);
+}
+
 .badge {
   display: inline-block;
-  padding: 0 0.5rem;
+  padding: 0.05rem 0.6rem;
   border: 1px solid var(--color-border);
   border-radius: 999px;
-  color: var(--color-muted);
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
   font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.badge--type {
+  border-color: var(--type-color);
+  background: transparent;
+  color: var(--type-color);
 }
 
 .notice {
   padding: var(--space);
+  border-left: 5px solid var(--color-notice-border);
   border-radius: var(--radius);
   background: var(--color-notice-bg);
   color: var(--color-notice-text);
 }
 
-.entry h2 {
+.entry h2,
+.legal h2 {
   margin-top: 2rem;
 }
 
 .entry li {
   overflow-wrap: anywhere;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  border-top: 4px solid transparent;
+  border-image: var(--brand-gradient) 1;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: 0.875rem;
 }

@@ -114,19 +114,27 @@ function page(title: string, description: string, assetPrefix: string, content: 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(description)}">
+<link rel="icon" href="${assetPrefix}brand/icon.svg" type="image/svg+xml">
+<link rel="icon" href="${assetPrefix}brand/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="${assetPrefix}brand/apple-touch-icon.png">
+<meta name="theme-color" content="#033e66">
 <link rel="stylesheet" href="${assetPrefix}site.css">
 <script src="${assetPrefix}site.js" defer></script>
 ${analyticsScript(context.analytics)}</head>
 <body>
 <header class="site-header">
-<a class="site-header__brand" href="${assetPrefix}index.html">Encyclopédie Antimanip</a>
+<div class="site-header__inner">
+<a class="brand" href="${assetPrefix}index.html"><img class="brand__logo" src="${assetPrefix}brand/logo-on-dark.svg" alt="" width="62" height="46"><span class="brand__name">Antimanip</span><span class="brand__tag">Encyclopédie</span></a>
 <button class="theme-toggle" type="button" data-theme-toggle aria-label="Changer de thème">Thème</button>
+</div>
 </header>
 <main class="site-main">
 ${content}
 </main>
 <footer class="site-footer">
+<div class="site-footer__inner">
 <p>Version ${escapeHtml(context.version)}, ${escapeHtml(context.buildDate)} · ©@finalspy · Contenu sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a> · <a href="${escapeHtml(context.repositoryUrl)}">Source et contributions</a> · <a href="${assetPrefix}mentions-legales.html">Mentions légales</a></p>
+</div>
 </footer>
 </body>
 </html>
@@ -158,8 +166,8 @@ export function renderEntryPage(entry: SiteEntry, visible: ReadonlyMap<string, S
     front.status === 'published'
       ? ''
       : '<p class="notice">Fiche en cours de relecture : ses sources sont citées, mais elle n\'a pas encore été validée par un relecteur humain.</p>';
-  const content = `<article class="entry">
-<p class="entry__meta"><span class="badge">${escapeHtml(TYPE_LABELS[front.type])}</span> <span class="badge badge--status">${statusLabel(front)}</span></p>
+  const content = `<article class="entry" data-type="${front.type}">
+<p class="entry__meta"><span class="badge badge--type" data-type="${front.type}">${escapeHtml(TYPE_LABELS[front.type])}</span> <span class="badge badge--status">${statusLabel(front)}</span></p>
 <h1>${escapeHtml(front.title)}</h1>
 <p class="entry__summary">${escapeHtml(front.summary)}</p>
 ${notice}
@@ -181,7 +189,7 @@ export function renderIndexPage(entries: readonly SiteEntry[], context: SiteCont
       return `<li class="entry-card" data-type="${front.type}" data-status="${front.status}" data-title="${escapeHtml(front.title)}" data-search="${escapeHtml(haystack)}">
 <a href="${escapeHtml(front.slug)}.html"><strong>${escapeHtml(front.title)}</strong></a>
 <p>${escapeHtml(front.summary)}</p>
-<p class="entry__meta"><span class="badge">${escapeHtml(TYPE_LABELS[front.type])}</span> <span class="badge badge--status">${statusLabel(front)}</span></p>
+<p class="entry__meta"><span class="badge badge--type" data-type="${front.type}">${escapeHtml(TYPE_LABELS[front.type])}</span> <span class="badge badge--status">${statusLabel(front)}</span></p>
 </li>`;
     })
     .join('\n');

@@ -15,6 +15,11 @@ Code
   SPDX-License-Identifier: AGPL-3.0-only
   Text: LICENSES/AGPL-3.0-only.txt
 
+Brand assets
+  site/brand/ (the Antimanip name and logo)
+  Not covered by the licenses above: all rights reserved by YPETIT. They may be shown unchanged to
+  refer to the project; any other use needs written permission.
+
 Attribution
 
 Reusing an entry under CC BY-SA 4.0 requires giving credit, linking to the license and stating
