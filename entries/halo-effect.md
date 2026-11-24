@@ -6,7 +6,7 @@ title: Effet de halo
 summary: Une impression générale, positive ou négative, déteint sur le jugement de qualités sans rapport avec elle.
 status: in-review
 themes: [cognitive-biases]
-related: [ad-hominem, cult-of-the-leader, dr-fox-effect]
+related: [ad-hominem, cult-of-the-leader, dr-fox-effect, horn-effect]
 classifications:
   wikipedia: [Halo_effect]
 references:
