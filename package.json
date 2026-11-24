@@ -16,6 +16,7 @@
   "exports": {
     "./entry": "./scripts/entry.ts",
     "./translation": "./scripts/translation.ts",
+    "./validate": "./scripts/validate.ts",
     "./schema/entry.schema.json": "./schema/entry.schema.json",
     "./entries/*": "./entries/*"
   },
