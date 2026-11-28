@@ -10,7 +10,7 @@ themes: [cognitive-biases]
 open_issues:
   - kind: unverified
     note: "Nuhfer et al. (2016) and Gignac and Zajenkowski (2020) are cited from their abstracts; check the claim against the papers."
-related: [charlatanism, dr-fox-effect]
+related: [charlatanism, dr-fox-effect, illusion-of-competence]
 classifications:
   wikipedia: [Dunning–Kruger_effect]
 references:

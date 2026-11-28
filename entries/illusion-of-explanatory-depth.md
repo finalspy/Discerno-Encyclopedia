@@ -6,7 +6,7 @@ title: Illusion de profondeur explicative
 summary: "On croit comprendre le fonctionnement des choses bien mieux qu'on ne le comprend, jusqu'au moment où on doit l'expliquer."
 status: in-review
 themes: [cognitive-biases]
-related: [overconfidence-effect, dunning-kruger-effect, causal-oversimplification]
+related: [overconfidence-effect, dunning-kruger-effect, causal-oversimplification, illusion-of-competence]
 references:
   - title: "The misunderstood limits of folk science: an illusion of explanatory depth"
     author: "Leonid Rozenblit, Frank Keil"

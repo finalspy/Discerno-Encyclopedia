@@ -7,7 +7,7 @@ synonyms: [effet Lac Wobegon]
 summary: On tend à se juger meilleur que la moyenne sur des qualités ou des compétences.
 status: in-review
 themes: [cognitive-biases]
-related: [overconfidence-effect, dunning-kruger-effect, self-serving-bias]
+related: [overconfidence-effect, dunning-kruger-effect, self-serving-bias, illusion-of-competence]
 classifications:
   wikipedia: [Illusory_superiority]
 references:
