@@ -6,7 +6,7 @@ title: Malédiction de la connaissance
 summary: "Quand on sait quelque chose, on a du mal à imaginer ce que c'est de ne pas le savoir."
 status: in-review
 themes: [cognitive-biases]
-related: [illusion-of-transparency, hindsight-bias]
+related: [illusion-of-transparency, hindsight-bias, effort-heuristic]
 classifications:
   wikipedia: [Curse_of_knowledge]
 references:
